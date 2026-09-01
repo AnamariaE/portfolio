@@ -1,4 +1,5 @@
 import { ArrowDownRight, ArrowUpRight, Globe2, Layers3, Palette, Sparkles } from 'lucide-react';
+import ContactForm from './contact-form';
 
 const projects = [
   { number: '01', eyebrow: 'GLOBAL LEARNING SYSTEMS', title: 'Designing learning at Wikimedia scale', copy: 'Eleven digital courses, reusable components and course-creation systems for multilingual communities worldwide.', result: '400+ participants', tone: 'coral' },
@@ -10,7 +11,7 @@ export default function Home() {
   return <main>
     <nav className="nav-shell" aria-label="Primary navigation">
       <a className="wordmark" href="#top" aria-label="Anamaría Espinoza, home"><span>AE</span><strong>Anamaría Espinoza</strong></a>
-      <div className="nav-links"><a href="#work">Selected work</a><a href="#method">Method</a><a href="#consulting">Consulting</a><a href="mailto:anamariaespinoza@gmail.com" className="contact-link">Let&apos;s talk <ArrowUpRight size={15}/></a></div>
+      <div className="nav-links"><a href="#work">Selected work</a><a href="#method">Method</a><a href="#consulting">Consulting</a><a href="#contact" className="contact-link">Let&apos;s talk <ArrowUpRight size={15}/></a></div>
     </nav>
     <section className="hero" id="top">
       <div className="hero-kicker"><span className="pulse"/> Working globally</div>
@@ -199,7 +200,7 @@ export default function Home() {
           <h3>Complete digital course</h3>
           <p>From the source document to a branded course, published and working in your LMS.</p>
           <ul><li>Learning architecture and script</li><li>Graphic and multimedia design</li><li>Moodle or Open edX production</li><li>Interactive learning objects</li><li>One revision round</li></ul>
-          <div className="consulting-price"><strong>From €6,500</strong><span>4 to 6 weeks</span></div>
+          <div className="consulting-price"><a className="service-contact" href="#contact">Contact me <ArrowUpRight size={18}/></a><span>Project scoped together</span></div>
         </article>
 
         <article className="consulting-card">
@@ -207,34 +208,43 @@ export default function Home() {
           <h3>Complex learning programme</h3>
           <p>For multiple courses, demanding audiences or programmes that need a reusable system.</p>
           <ul><li>Multi-course architecture</li><li>Adaptation for low-literacy audiences</li><li>Reusable components and workflows</li><li>Team capability session</li><li>Two revision rounds</li></ul>
-          <div className="consulting-price"><strong>From €10,000</strong><span>Scope defined together</span></div>
+          <div className="consulting-price"><a className="service-contact" href="#contact">Contact me <ArrowUpRight size={18}/></a><span>Project scoped together</span></div>
         </article>
 
         <article className="consulting-card compact">
           <div><span>04</span><p className="eyebrow">ONGOING CAPACITY</p></div>
           <h3>Fractional learning design support</h3>
           <p>Reserved weekly capacity for organisations with an ongoing learning roadmap.</p>
-          <div className="consulting-price"><strong>From €4,200 / month</strong><span>About 8 hours weekly · 3 month minimum</span></div>
+          <div className="consulting-price"><a className="service-contact" href="#contact">Contact me <ArrowUpRight size={18}/></a><span>Ongoing collaboration</span></div>
         </article>
 
         <article className="consulting-card compact session">
           <div><span>05</span><p className="eyebrow">FOCUSED ADVICE</p></div>
           <h3>Criteria session</h3>
           <p>A 90-minute review of an existing course, with concrete priorities and written recommendations.</p>
-          <div className="consulting-price"><strong>USD 300</strong><span>One 90-minute session</span></div>
+          <div className="consulting-price"><a className="service-contact" href="#contact">Contact me <ArrowUpRight size={18}/></a><span>Focused advice</span></div>
         </article>
       </div>
 
       <div className="consulting-cta">
-        <div><strong>Not sure what your project needs?</strong><p>Request a free 20-minute fit call. Focused advisory work is available at USD 200 per hour. Complete learning projects are priced by scope.</p><small>Fees are shown before applicable taxes. Final scope and timing are agreed before work begins.</small></div>
-        <div className="consulting-actions"><a href="mailto:anamariaespinoza@gmail.com?subject=Free%2020-minute%20fit%20call">Request a free fit call <ArrowUpRight size={18}/></a><a className="secondary" href="mailto:anamariaespinoza@gmail.com?subject=90-minute%20Criteria%20Session">Reserve a Criteria Session <ArrowUpRight size={18}/></a></div>
+        <div><strong>Not sure what your project needs?</strong><p>Request a free 20-minute fit call or tell me what you are planning. Complete learning projects are priced after the scope is understood.</p><small>Final scope, timing and fees are agreed before work begins.</small></div>
+        <div className="consulting-actions"><a href="#contact">Tell me about your project <ArrowUpRight size={18}/></a><a className="secondary" href="#contact">Request a free fit call <ArrowUpRight size={18}/></a></div>
       </div>
+    </section>
+
+    <section className="contact-section" id="contact" aria-labelledby="contact-title">
+      <div className="contact-intro">
+        <p className="eyebrow">START A CONVERSATION</p>
+        <h2 id="contact-title">What are you trying to make possible?</h2>
+        <p>Share a little about your organisation, audience and challenge. I will reply with the most useful next step, whether that is a short fit call, a focused session or a project proposal.</p>
+      </div>
+      <ContactForm />
     </section>
 
     <footer className="footer">
       <p className="footer-kicker">Available for senior remote opportunities and selected consulting work</p>
       <h2>Have complex knowledge that needs to become clear?</h2>
-      <div className="footer-links"><a href="mailto:anamariaespinoza@gmail.com">anamariaespinoza@gmail.com <ArrowUpRight size={18}/></a><a href="https://linkedin.com/in/anamariaespinoza" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={18}/></a></div>
+      <div className="footer-links"><a href="#contact">Contact form <ArrowUpRight size={18}/></a><a href="mailto:anamariaespinoza@gmail.com">anamariaespinoza@gmail.com <ArrowUpRight size={18}/></a><a href="https://linkedin.com/in/anamariaespinoza" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={18}/></a></div>
       <div className="footer-bottom"><span>Working globally</span><span>© 2026 Anamaría Espinoza</span></div>
     </footer>
   </main>;
