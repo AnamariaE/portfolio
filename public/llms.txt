@@ -15,6 +15,7 @@ Anamaría Espinoza is a senior learning transformation and learning experience p
 - Works with Open edX, Moodle, Canvas, HTML/CSS, Figma, Adobe Creative Suite and multimedia production tools.
 - Designs for accessibility, low connectivity, varied digital confidence and culturally diverse contexts.
 - Developed the NarrLab Method for transforming complex information into clear, memorable and usable learning experiences.
+- Created ED-UCA while teaching at Universidad Centroamericana José Simeón Cañas: a multimedia library for digital pedagogy, teaching tools and educational technology.
 
 ## Primary topics
 

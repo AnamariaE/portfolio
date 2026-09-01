@@ -79,6 +79,24 @@ export default function Home() {
       <blockquote className="method-formula">A NarrLab story transforms a gap into a journey, data into meaning, experience into memory and emotion into thoughtful action.</blockquote>
     </section>
 
+    <section className="origin-section" id="origin" aria-labelledby="origin-title">
+      <div className="origin-heading">
+        <p className="eyebrow">THE ORIGIN / UCA · 2018</p>
+        <h2 id="origin-title">NarrLab had a practice before it had a name.</h2>
+      </div>
+      <div className="origin-story">
+        <p className="origin-lead">While teaching at Universidad Centroamericana José Simeón Cañas, I created ED-UCA: a multimedia library that helped university educators explore digital pedagogy, teaching tools and emerging technologies.</p>
+        <p>The project brought together tutorials, educational articles, interviews and multimedia resources. Looking back, it contains the foundations of the work I do now: listen to a real learning context, structure complex knowledge and give it a visual and technological form people can use.</p>
+        <a className="inline-link" href="https://www.uca.edu.sv/comunicaciones-cultura/educomunicacion/" target="_blank" rel="noreferrer">Explore the ED-UCA archive <ArrowUpRight size={16}/></a>
+      </div>
+      <ol className="origin-principles" aria-label="Principles carried from ED-UCA into NarrLab">
+        <li><span>01</span><div><strong>Listen first</strong><p>Understand the learner, the context and the constraints before choosing a format.</p></div></li>
+        <li><span>02</span><div><strong>Structure with judgement</strong><p>Decide what belongs, what can go and how understanding should unfold.</p></div></li>
+        <li><span>03</span><div><strong>Design and deliver as one system</strong><p>Pedagogy, narrative, visual identity and technology are shaped together.</p></div></li>
+      </ol>
+      <p className="origin-note">ED-UCA → university teaching → digital humanities → global learning systems → the NarrLab Method</p>
+    </section>
+
     <section className="case-studies" aria-label="Case studies">
       <article className="case-study">
         <div className="case-visual wiki-visual">
