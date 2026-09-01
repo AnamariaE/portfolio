@@ -223,8 +223,8 @@ export default function Home() {
           <div><span>05</span><p className="eyebrow">FOCUSED ADVICE</p></div>
           <h3>Criteria session</h3>
           <p>A 90-minute review of an existing course, with concrete priorities and written recommendations.</p>
-          <div className="consulting-price"><strong>€300</strong><a className="price-action" href="#contact">Request this session <ArrowUpRight size={14}/></a></div>
-          <small className="tax-note">Taxes not included</small>
+          <div className="consulting-price"><strong>€300</strong><a className="price-action" href="https://calendly.com/hello-anamariaespinoza/criteria-session" target="_blank" rel="noreferrer">Book this session <ArrowUpRight size={14}/></a></div>
+          <small className="tax-note">Taxes not included. Payment by bank transfer.</small>
         </article>
       </div>
 
