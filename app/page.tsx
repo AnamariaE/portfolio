@@ -1,4 +1,4 @@
-import { ArrowDownRight, ArrowUpRight, Globe2, Layers3, Sparkles } from 'lucide-react';
+import { ArrowDownRight, ArrowUpRight, Globe2, Layers3, Palette, Sparkles } from 'lucide-react';
 
 const projects = [
   { number: '01', eyebrow: 'GLOBAL LEARNING SYSTEMS', title: 'Designing learning at Wikimedia scale', copy: 'Eleven digital courses, reusable components and course-creation systems for multilingual communities worldwide.', result: '400+ participants', tone: 'coral' },
@@ -15,11 +15,11 @@ export default function Home() {
     <section className="hero" id="top">
       <div className="hero-kicker"><span className="pulse"/> Spain-based · Working globally</div>
       <h1>I design learning<span className="hero-accent"> systems that move</span><span> people forward.</span></h1>
-      <div className="hero-notes" aria-hidden="true"><span>LEARNING</span><span>TECHNOLOGY</span><span>NARRATIVE</span></div>
-      <div className="hero-bottom"><p>Senior Learning Transformation & Experience professional turning complex knowledge into clear, accessible and scalable learning.</p><a className="round-link" href="#work" aria-label="Explore selected work"><ArrowDownRight size={28}/></a></div>
+      <div className="hero-notes" aria-hidden="true"><span>LEARNING</span><span>GRAPHIC</span><span>MULTIMEDIA</span><span>WEB</span><span>TECHNOLOGY</span><span>NARRATIVE</span></div>
+      <div className="hero-bottom"><p>Senior Learning Transformation & Experience professional—and graphic, multimedia and web designer—turning complex knowledge into clear, accessible and scalable experiences.</p><a className="round-link" href="#work" aria-label="Explore selected work"><ArrowDownRight size={28}/></a></div>
     </section>
     <section className="proof-strip" aria-label="Selected impact">
-      <div><strong>10+</strong><span>years across learning, design and technology</span></div>
+      <div><strong>10+</strong><span>years across learning, graphic, multimedia and web design</span></div>
       <div><strong>11</strong><span>global digital courses designed and developed</span></div>
       <div><strong>400+</strong><span>participants across multicultural communities</span></div>
     </section>
@@ -27,7 +27,7 @@ export default function Home() {
       <div className="section-heading"><span>Selected work</span><h2>Strategy becomes credible when you can see what it changed.</h2></div>
       <div className="project-grid">{projects.map((project)=><article className={`project-card ${project.tone}`} key={project.number}><div className="card-top"><span>{project.number}</span><ArrowUpRight size={22}/></div><div><p className="eyebrow">{project.eyebrow}</p><h3>{project.title}</h3><p className="card-copy">{project.copy}</p></div><strong className="result">{project.result}</strong></article>)}</div>
     </section>
-    <section className="approach-preview" id="approach"><div className="approach-title"><Sparkles size={20}/><span>Where I work best</span></div><div className="capability-list"><div><Globe2/><span>Global and community-centred learning</span></div><div><Layers3/><span>Scalable systems, pathways and workflows</span></div><div><Sparkles/><span>Learning technology, data and AI</span></div></div></section>
+    <section className="approach-preview" id="approach"><div className="approach-title"><Sparkles size={20}/><span>Where I work best</span></div><div className="capability-list"><div><Globe2/><span>Global and community-centred learning</span></div><div><Layers3/><span>Scalable systems, pathways and workflows</span></div><div><Palette/><span>Graphic, multimedia and web design</span></div><div><Sparkles/><span>Learning technology, data and AI</span></div></div></section>
 
     <section className="belief-section" aria-labelledby="belief-title">
       <p className="eyebrow">A point of view</p>
@@ -169,6 +169,7 @@ export default function Home() {
       <div>
         <h2>I work where learning strategy meets hands-on delivery.</h2>
         <p>I have spent more than a decade across global nonprofits, international development and higher education. I can help define the learning architecture, make sense of stakeholder needs and carry the work through to a functioning experience.</p>
+        <p>I am also a graphic, multimedia and web designer. That is not an adjacent service: it is part of how I think. I can shape the visual language, narrative, interface and multimedia production of a learning experience—not only its instructional structure.</p>
         <p>My toolkit includes Open edX, Moodle, Canvas, Figma, Adobe Creative Suite, HTML/CSS, facilitation and functional knowledge of data, AI, R and Python.</p>
       </div>
     </section>

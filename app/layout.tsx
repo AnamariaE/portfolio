@@ -8,7 +8,7 @@ const display = Space_Mono({ variable: '--font-annotation', subsets: ['latin'], 
 export const metadata: Metadata = {
   metadataBase: new URL('https://anamaria-learning-portfolio.profesoraneon.chatgpt.site'),
   title: 'Anamaría Espinoza — Learning Transformation & Experience',
-  description: 'Senior Learning Transformation and Experience professional designing accessible, scalable learning systems for global organisations.',
+  description: 'Senior Learning Transformation professional and graphic, multimedia and web designer creating accessible, scalable learning systems.',
   openGraph: {
     title: 'Anamaría Espinoza — Learning Transformation & Experience',
     description: 'Learning systems that move people forward.',
