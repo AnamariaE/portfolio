@@ -193,6 +193,7 @@ export default function Home() {
           <p>For teams that have the expertise and content, but need a clear learning journey.</p>
           <ul><li>Content and audience analysis</li><li>Instructional script</li><li>Module map and learning objectives</li><li>Format and platform recommendations</li></ul>
           <div className="consulting-price"><strong>From €2,800</strong><span>2 to 3 weeks</span></div>
+          <small className="tax-note">Taxes not included</small>
         </article>
 
         <article className="consulting-card featured">
@@ -222,12 +223,13 @@ export default function Home() {
           <div><span>05</span><p className="eyebrow">FOCUSED ADVICE</p></div>
           <h3>Criteria session</h3>
           <p>A 90-minute review of an existing course, with concrete priorities and written recommendations.</p>
-          <div className="consulting-price"><a className="service-contact" href="#contact">Contact me <ArrowUpRight size={18}/></a><span>Focused advice</span></div>
+          <div className="consulting-price"><strong>€300</strong><a className="price-action" href="#contact">Request this session <ArrowUpRight size={14}/></a></div>
+          <small className="tax-note">Taxes not included</small>
         </article>
       </div>
 
       <div className="consulting-cta">
-        <div><strong>Not sure what your project needs?</strong><p>Request a free 20-minute fit call or tell me what you are planning. Complete learning projects are priced after the scope is understood.</p><small>Final scope, timing and fees are agreed before work begins.</small></div>
+        <div><strong>Not sure what your project needs?</strong><p>Request a free 20-minute fit call or tell me what you are planning. Complete learning projects are priced after the scope is understood.</p><small>Displayed prices exclude applicable taxes. Final scope, timing and fees are agreed before work begins.</small></div>
         <div className="consulting-actions"><a href="#contact">Tell me about your project <ArrowUpRight size={18}/></a><a className="secondary" href="https://calendly.com/hello-anamariaespinoza/30min" target="_blank" rel="noreferrer">Book a free fit call <ArrowUpRight size={18}/></a></div>
       </div>
     </section>
