@@ -1,4 +1,4 @@
-# Anamaría Espinoza — Learning Transformation Portfolio
+# Anamaría Espinoza: Learning Transformation Portfolio
 
 Source and GitHub Pages build for Anamaría's professional portfolio.
 
