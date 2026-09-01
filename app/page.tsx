@@ -190,7 +190,7 @@ export default function Home() {
           <h3>Instructional structure</h3>
           <p>For teams that have the expertise and content, but need a clear learning journey.</p>
           <ul><li>Content and audience analysis</li><li>Instructional script</li><li>Module map and learning objectives</li><li>Format and platform recommendations</li></ul>
-          <div className="consulting-price"><strong>€2,800</strong><span>2 to 3 weeks</span></div>
+          <div className="consulting-price"><strong>From €2,800</strong><span>2 to 3 weeks</span></div>
         </article>
 
         <article className="consulting-card featured">
@@ -198,7 +198,7 @@ export default function Home() {
           <h3>Complete digital course</h3>
           <p>From the source document to a branded course, published and working in your LMS.</p>
           <ul><li>Learning architecture and script</li><li>Graphic and multimedia design</li><li>Moodle or Open edX production</li><li>Interactive learning objects</li><li>One revision round</li></ul>
-          <div className="consulting-price"><strong>€6,500</strong><span>4 to 6 weeks</span></div>
+          <div className="consulting-price"><strong>From €6,500</strong><span>4 to 6 weeks</span></div>
         </article>
 
         <article className="consulting-card">
@@ -213,20 +213,20 @@ export default function Home() {
           <div><span>04</span><p className="eyebrow">ONGOING CAPACITY</p></div>
           <h3>Fractional learning design support</h3>
           <p>Reserved weekly capacity for organisations with an ongoing learning roadmap.</p>
-          <div className="consulting-price"><strong>€4,200 / month</strong><span>About 8 hours weekly · 3 month minimum</span></div>
+          <div className="consulting-price"><strong>From €4,200 / month</strong><span>About 8 hours weekly · 3 month minimum</span></div>
         </article>
 
         <article className="consulting-card compact session">
           <div><span>05</span><p className="eyebrow">FOCUSED ADVICE</p></div>
           <h3>Criteria session</h3>
           <p>A 90-minute review of an existing course, with concrete priorities and written recommendations.</p>
-          <div className="consulting-price"><strong>€320</strong><span>One focused session</span></div>
+          <div className="consulting-price"><strong>USD 300</strong><span>One 90-minute session</span></div>
         </article>
       </div>
 
       <div className="consulting-cta">
-        <p>Fees are indicative and shown before applicable taxes. Final scope and timing are agreed before work begins.</p>
-        <a href="mailto:anamariaespinoza@gmail.com?subject=Consulting%20inquiry">Discuss a consulting project <ArrowUpRight size={18}/></a>
+        <div><strong>Not sure what your project needs?</strong><p>Request a free 20-minute fit call. Focused advisory work is available at USD 200 per hour. Complete learning projects are priced by scope.</p><small>Fees are shown before applicable taxes. Final scope and timing are agreed before work begins.</small></div>
+        <div className="consulting-actions"><a href="mailto:anamariaespinoza@gmail.com?subject=Free%2020-minute%20fit%20call">Request a free fit call <ArrowUpRight size={18}/></a><a className="secondary" href="mailto:anamariaespinoza@gmail.com?subject=90-minute%20Criteria%20Session">Reserve a Criteria Session <ArrowUpRight size={18}/></a></div>
       </div>
     </section>
 
