@@ -82,7 +82,7 @@ export default function Home() {
     <section className="case-studies" aria-label="Case studies">
       <article className="case-study">
         <div className="case-visual wiki-visual">
-          <img src="/assets/wikilearn-current.png" alt="Current WikiLearn learning platform interface" />
+          <img src="assets/wikilearn-current.png" alt="Current WikiLearn learning platform interface" />
           <span className="visual-label">WikiLearn · 2022–Present</span>
         </div>
         <div className="case-content">
