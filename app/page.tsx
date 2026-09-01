@@ -13,7 +13,7 @@ export default function Home() {
       <div className="nav-links"><a href="#work">Selected work</a><a href="#method">Method</a><a href="#consulting">Consulting</a><a href="mailto:anamariaespinoza@gmail.com" className="contact-link">Let&apos;s talk <ArrowUpRight size={15}/></a></div>
     </nav>
     <section className="hero" id="top">
-      <div className="hero-kicker"><span className="pulse"/> Spain-based · Working globally</div>
+      <div className="hero-kicker"><span className="pulse"/> Working globally</div>
       <h1>I design learning<span className="hero-accent"> systems that move</span><span> people forward.</span></h1>
       <div className="hero-notes" aria-hidden="true"><span>LEARNING</span><span>GRAPHIC</span><span>MULTIMEDIA</span><span>WEB</span><span>TECHNOLOGY</span><span>NARRATIVE</span></div>
       <div className="hero-bottom"><p>Senior Learning Transformation & Experience professional. I am also a graphic, multimedia and web designer, turning complex knowledge into clear, accessible and scalable experiences.</p><a className="round-link" href="#work" aria-label="Explore selected work"><ArrowDownRight size={28}/></a></div>
@@ -235,7 +235,7 @@ export default function Home() {
       <p className="footer-kicker">Available for senior remote opportunities and selected consulting work</p>
       <h2>Have complex knowledge that needs to become clear?</h2>
       <div className="footer-links"><a href="mailto:anamariaespinoza@gmail.com">anamariaespinoza@gmail.com <ArrowUpRight size={18}/></a><a href="https://linkedin.com/in/anamariaespinoza" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={18}/></a></div>
-      <div className="footer-bottom"><span>Spain · Working globally</span><span>© 2026 Anamaría Espinoza</span></div>
+      <div className="footer-bottom"><span>Working globally</span><span>© 2026 Anamaría Espinoza</span></div>
     </footer>
   </main>;
 }
