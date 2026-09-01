@@ -223,13 +223,14 @@ export default function Home() {
           <div><span>05</span><p className="eyebrow">FOCUSED ADVICE</p></div>
           <h3>Criteria session</h3>
           <p>A 90-minute review of an existing course, with concrete priorities and written recommendations.</p>
-          <div className="consulting-price"><strong>€300</strong><a className="price-action" href="https://calendly.com/hello-anamariaespinoza/criteria-session" target="_blank" rel="noreferrer">Book this session <ArrowUpRight size={14}/></a></div>
-          <small className="tax-note">Taxes not included. After booking, you will receive an advance payment request by bank transfer or secure card link.</small>
+          <div className="consulting-price session-price"><strong>€300</strong><span>90-minute session</span></div>
+          <small className="tax-note">Taxes included. After booking, you will receive an advance payment request by bank transfer or secure card link.</small>
+          <a className="session-book-button" href="https://calendly.com/hello-anamariaespinoza/criteria-session" target="_blank" rel="noreferrer">Book the Criteria Session <ArrowUpRight size={17}/></a>
         </article>
       </div>
 
       <div className="consulting-cta">
-        <div><strong>Not sure what your project needs?</strong><p>Request a free 20-minute fit call or tell me what you are planning. Complete learning projects are priced after the scope is understood.</p><small>Displayed prices exclude applicable taxes. Final scope, timing and fees are agreed before work begins.</small></div>
+        <div><strong>Not sure what your project needs?</strong><p>Request a free 20-minute fit call or tell me what you are planning. Complete learning projects are priced after the scope is understood.</p><small>Tax treatment is stated on each priced service. Final scope, timing and fees are agreed before work begins.</small></div>
         <div className="consulting-actions"><a href="#contact">Tell me about your project <ArrowUpRight size={18}/></a><a className="secondary" href="https://calendly.com/hello-anamariaespinoza/30min" target="_blank" rel="noreferrer">Book a free fit call <ArrowUpRight size={18}/></a></div>
       </div>
     </section>
