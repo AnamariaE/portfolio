@@ -228,7 +228,7 @@ export default function Home() {
 
       <div className="consulting-cta">
         <div><strong>Not sure what your project needs?</strong><p>Request a free 20-minute fit call or tell me what you are planning. Complete learning projects are priced after the scope is understood.</p><small>Final scope, timing and fees are agreed before work begins.</small></div>
-        <div className="consulting-actions"><a href="#contact">Tell me about your project <ArrowUpRight size={18}/></a><a className="secondary" href="#contact">Request a free fit call <ArrowUpRight size={18}/></a></div>
+        <div className="consulting-actions"><a href="#contact">Tell me about your project <ArrowUpRight size={18}/></a><a className="secondary" href="https://calendly.com/hello-anamariaespinoza/30min" target="_blank" rel="noreferrer">Book a free fit call <ArrowUpRight size={18}/></a></div>
       </div>
     </section>
 
