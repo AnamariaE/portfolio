@@ -1,4 +1,4 @@
-# Anamaría Espinoza — Learning Transformation Portfolio
+# Anamaría Espinoza: Learning Transformation Portfolio
 
 Canonical URL: https://anamariae.github.io/portfolio/
 Language: English
@@ -31,6 +31,10 @@ Anamaría Espinoza is a senior learning transformation and learning experience p
 - Gamification and educational storytelling
 - Accessible and community-centred learning
 - Data-informed design and AI in learning
+
+## Consulting services
+
+Anamaría also works directly with NGOs, international organisations and expert teams on learning architecture, complete digital course production, complex learning programmes, ongoing learning design capacity and focused course-review sessions. Her consulting work combines instructional design, graphic and multimedia design, web production and LMS implementation in one process.
 
 ## Profiles and contact
 
