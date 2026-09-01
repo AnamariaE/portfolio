@@ -3,20 +3,20 @@ import { ArrowDownRight, ArrowUpRight, Globe2, Layers3, Palette, Sparkles } from
 const projects = [
   { number: '01', eyebrow: 'GLOBAL LEARNING SYSTEMS', title: 'Designing learning at Wikimedia scale', copy: 'Eleven digital courses, reusable components and course-creation systems for multilingual communities worldwide.', result: '400+ participants', tone: 'coral' },
   { number: '02', eyebrow: 'ACCESSIBLE DIGITAL LEARNING', title: 'GAAP: learning built for real constraints', copy: 'A nine-module gamified programme designed around low connectivity, varied literacy and rural community contexts.', result: '51 learning objects', tone: 'ink' },
-  { number: '03', eyebrow: 'COMMUNITY-CENTRED DESIGN', title: 'Co-creating with Wayuu communities', copy: 'Culturally relevant learning that adapts digital formats to the community—not the other way around.', result: '2022–2024', tone: 'sun' },
+  { number: '03', eyebrow: 'COMMUNITY-CENTRED DESIGN', title: 'Co-creating with Wayuu communities', copy: 'Culturally relevant learning that adapts digital formats to the community, not the other way around.', result: '2022 to 2024', tone: 'sun' },
 ];
 
 export default function Home() {
   return <main>
     <nav className="nav-shell" aria-label="Primary navigation">
       <a className="wordmark" href="#top" aria-label="Anamaría Espinoza, home"><span>AE</span><strong>Anamaría Espinoza</strong></a>
-      <div className="nav-links"><a href="#work">Selected work</a><a href="#method">Method</a><a href="#approach">Approach</a><a href="mailto:anamariaespinoza@gmail.com" className="contact-link">Let&apos;s talk <ArrowUpRight size={15}/></a></div>
+      <div className="nav-links"><a href="#work">Selected work</a><a href="#method">Method</a><a href="#consulting">Consulting</a><a href="mailto:anamariaespinoza@gmail.com" className="contact-link">Let&apos;s talk <ArrowUpRight size={15}/></a></div>
     </nav>
     <section className="hero" id="top">
       <div className="hero-kicker"><span className="pulse"/> Spain-based · Working globally</div>
       <h1>I design learning<span className="hero-accent"> systems that move</span><span> people forward.</span></h1>
       <div className="hero-notes" aria-hidden="true"><span>LEARNING</span><span>GRAPHIC</span><span>MULTIMEDIA</span><span>WEB</span><span>TECHNOLOGY</span><span>NARRATIVE</span></div>
-      <div className="hero-bottom"><p>Senior Learning Transformation & Experience professional—and graphic, multimedia and web designer—turning complex knowledge into clear, accessible and scalable experiences.</p><a className="round-link" href="#work" aria-label="Explore selected work"><ArrowDownRight size={28}/></a></div>
+      <div className="hero-bottom"><p>Senior Learning Transformation & Experience professional. I am also a graphic, multimedia and web designer, turning complex knowledge into clear, accessible and scalable experiences.</p><a className="round-link" href="#work" aria-label="Explore selected work"><ArrowDownRight size={28}/></a></div>
     </section>
     <section className="proof-strip" aria-label="Selected impact">
       <div><strong>10+</strong><span>years across learning, graphic, multimedia and web design</span></div>
@@ -34,7 +34,7 @@ export default function Home() {
       <h2 id="belief-title">Gamification is structure, <em>not decoration.</em></h2>
       <div className="belief-copy">
         <p>Gamification is not a decorative layer added after the learning has been designed. It structures progression, attention, choice and feedback so learners understand where they are, why it matters and what comes next.</p>
-        <p>Storytelling works in the same way. It is not an optional multimedia resource—it is the architecture that turns information into a journey people can understand, remember and use.</p>
+        <p>Storytelling works in the same way. It is not an optional multimedia resource. It is the architecture that turns information into a journey people can understand, remember and use.</p>
       </div>
     </section>
 
@@ -42,7 +42,7 @@ export default function Home() {
       <div className="method-intro">
         <p className="eyebrow">The NarrLab Method</p>
         <h2 id="method-title">From scattered information to a learning experience that works.</h2>
-        <p>I developed NarrLab as a repeatable way to turn abstract or complex information into experiences people can understand, remember and use. It connects strategy with execution—from the first ambiguous brief to the finished learning system.</p>
+        <p>I developed NarrLab as a repeatable way to turn abstract or complex information into experiences people can understand, remember and use. It connects strategy with execution, from the first ambiguous brief to the finished learning system.</p>
       </div>
 
       <div className="method-frameworks">
@@ -101,7 +101,7 @@ export default function Home() {
       <article className="case-study">
         <div className="case-visual wiki-visual">
           <img src="assets/wikilearn-current.png" alt="Current WikiLearn learning platform interface" />
-          <span className="visual-label">WikiLearn · 2022–Present</span>
+          <span className="visual-label">WikiLearn · 2022 to present</span>
         </div>
         <div className="case-content">
           <p className="eyebrow coral-text">01 / GLOBAL LEARNING SYSTEMS</p>
@@ -120,7 +120,7 @@ export default function Home() {
         <div className="case-visual genially-visual">
           <iframe
             src="https://view.genially.com/648a40f9ca5674001a0b7be0"
-            title="Gaplandia — interactive GAAP learning experience"
+            title="Gaplandia: interactive GAAP learning experience"
             loading="lazy"
             allow="fullscreen"
             allowFullScreen
@@ -143,7 +143,7 @@ export default function Home() {
         <div className="case-number-panel"><span>03</span><strong>WAYUU<br/>LEARNING<br/>CIRCLES</strong></div>
         <div className="case-content">
           <p className="eyebrow coral-text">03 / COMMUNITY-CENTRED DESIGN</p>
-          <h2>The format adapts to the community—not the other way around.</h2>
+          <h2>The format adapts to the community, not the other way around.</h2>
           <p className="case-lead">The Wayuu Learning Circles began with cultural research and direct collaboration before any learning asset was designed.</p>
           <dl className="case-facts">
             <div><dt>Approach</dt><dd>Understand how knowledge is created, shared and lived in the community, then use that logic to shape the digital experience.</dd></div>
@@ -156,7 +156,7 @@ export default function Home() {
     </section>
 
     <section className="more-work">
-      <div className="section-heading"><span>More evidence</span><h2>Learning, technology and design—working as one system.</h2></div>
+      <div className="section-heading"><span>More evidence</span><h2>Learning, technology and design working as one system.</h2></div>
       <div className="more-grid">
         <article><span>200 certified participants</span><h3>Organizer Lab</h3><p>Instructional development, templates, visual system and Open edX delivery for two global editions.</p></article>
         <article><span>Designed in 2021 · Continued in 2024</span><h3>Digital Humanities</h3><p>A complete university curriculum and gamified Moodle experience used by 120 students across two editions in 2021. After I left UCA, the gamification system continued to be used in 2024.</p></article>
@@ -169,8 +169,64 @@ export default function Home() {
       <div>
         <h2>I work where learning strategy meets hands-on delivery.</h2>
         <p>I have spent more than a decade across global nonprofits, international development and higher education. I can help define the learning architecture, make sense of stakeholder needs and carry the work through to a functioning experience.</p>
-        <p>I am also a graphic, multimedia and web designer. That is not an adjacent service: it is part of how I think. I can shape the visual language, narrative, interface and multimedia production of a learning experience—not only its instructional structure.</p>
+        <p>I am also a graphic, multimedia and web designer. That is not an adjacent service: it is part of how I think. I can shape the visual language, narrative, interface and multimedia production of a learning experience, not only its instructional structure.</p>
         <p>My toolkit includes Open edX, Moodle, Canvas, Figma, Adobe Creative Suite, HTML/CSS, facilitation and functional knowledge of data, AI, R and Python.</p>
+      </div>
+    </section>
+
+    <section className="consulting-section" id="consulting" aria-labelledby="consulting-title">
+      <div className="consulting-intro">
+        <p className="eyebrow">SELECTED CONSULTING</p>
+        <h2 id="consulting-title">Complex knowledge, turned into learning that works.</h2>
+        <div>
+          <p>I work with NGOs, international organisations and expert teams that need to structure, design and publish learning without coordinating separate instructional, visual and technical suppliers.</p>
+          <p>Every engagement begins with the learner, the context and the constraints. The result is a coherent learning product, ready to use and true to the organisation behind it.</p>
+        </div>
+      </div>
+
+      <div className="consulting-grid">
+        <article className="consulting-card">
+          <div><span>01</span><p className="eyebrow">LEARNING ARCHITECTURE</p></div>
+          <h3>Instructional structure</h3>
+          <p>For teams that have the expertise and content, but need a clear learning journey.</p>
+          <ul><li>Content and audience analysis</li><li>Instructional script</li><li>Module map and learning objectives</li><li>Format and platform recommendations</li></ul>
+          <div className="consulting-price"><strong>€2,800</strong><span>2 to 3 weeks</span></div>
+        </article>
+
+        <article className="consulting-card featured">
+          <div><span>02</span><p className="eyebrow">END TO END</p></div>
+          <h3>Complete digital course</h3>
+          <p>From the source document to a branded course, published and working in your LMS.</p>
+          <ul><li>Learning architecture and script</li><li>Graphic and multimedia design</li><li>Moodle or Open edX production</li><li>Interactive learning objects</li><li>One revision round</li></ul>
+          <div className="consulting-price"><strong>€6,500</strong><span>4 to 6 weeks</span></div>
+        </article>
+
+        <article className="consulting-card">
+          <div><span>03</span><p className="eyebrow">TRANSFORMATION</p></div>
+          <h3>Complex learning programme</h3>
+          <p>For multiple courses, demanding audiences or programmes that need a reusable system.</p>
+          <ul><li>Multi-course architecture</li><li>Adaptation for low-literacy audiences</li><li>Reusable components and workflows</li><li>Team capability session</li><li>Two revision rounds</li></ul>
+          <div className="consulting-price"><strong>From €10,000</strong><span>Scope defined together</span></div>
+        </article>
+
+        <article className="consulting-card compact">
+          <div><span>04</span><p className="eyebrow">ONGOING CAPACITY</p></div>
+          <h3>Fractional learning design support</h3>
+          <p>Reserved weekly capacity for organisations with an ongoing learning roadmap.</p>
+          <div className="consulting-price"><strong>€4,200 / month</strong><span>About 8 hours weekly · 3 month minimum</span></div>
+        </article>
+
+        <article className="consulting-card compact session">
+          <div><span>05</span><p className="eyebrow">FOCUSED ADVICE</p></div>
+          <h3>Criteria session</h3>
+          <p>A 90-minute review of an existing course, with concrete priorities and written recommendations.</p>
+          <div className="consulting-price"><strong>€320</strong><span>One focused session</span></div>
+        </article>
+      </div>
+
+      <div className="consulting-cta">
+        <p>Fees are indicative and shown before applicable taxes. Final scope and timing are agreed before work begins.</p>
+        <a href="mailto:anamariaespinoza@gmail.com?subject=Consulting%20inquiry">Discuss a consulting project <ArrowUpRight size={18}/></a>
       </div>
     </section>
 
