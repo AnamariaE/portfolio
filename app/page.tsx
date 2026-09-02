@@ -10,12 +10,15 @@ const projects = [
 export default function Home() {
   return <main>
     <nav className="nav-shell" aria-label="Primary navigation">
-      <a className="wordmark" href="#top" aria-label="Anamaría Espinoza, home"><span>AE</span><strong>Anamaría Espinoza</strong></a>
+      <a className="wordmark" href="#top" aria-label="Anamaría Espinoza, home">{/* oxlint-disable-next-line next/no-img-element */}<img src="logo-anamaria-maestro-recortado.svg" alt=""/><strong>Anamaría Espinoza</strong></a>
       <div className="nav-links"><a href="#work">Selected work</a><a href="#method">Method</a><a href="#consulting">Consulting</a><a href="#contact" className="contact-link">Let&apos;s talk <ArrowUpRight size={15}/></a></div>
     </nav>
     <section className="hero" id="top">
       <div className="hero-kicker"><span className="pulse"/> Working globally</div>
-      <h1>I design learning<span className="hero-accent"> systems that move</span><span> people forward.</span></h1>
+      <div className="hero-lead">
+        <h1>I design learning<span className="hero-accent"> systems that move</span><span> people forward.</span></h1>
+        <div className="hero-logo-stage" aria-hidden="true">{/* oxlint-disable-next-line next/no-img-element */}<img className="hero-logo" src="logo-anamaria-maestro-recortado.svg" alt=""/></div>
+      </div>
       <div className="hero-notes" aria-hidden="true"><span>LEARNING</span><span>GRAPHIC</span><span>MULTIMEDIA</span><span>WEB</span><span>TECHNOLOGY</span><span>NARRATIVE</span></div>
       <div className="hero-bottom"><p>Senior Learning Transformation & Experience professional. I am also a graphic, multimedia and web designer, turning complex knowledge into clear, accessible and scalable experiences.</p><a className="round-link" href="#work" aria-label="Explore selected work"><ArrowDownRight size={28}/></a></div>
     </section>

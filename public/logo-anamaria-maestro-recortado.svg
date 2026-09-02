@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="400 40 800 1120" role="img" aria-label="Monograma de Anamaria">
+  <defs>
+    <linearGradient id="fill" x1="1.61" y1="1200.56" x2="2.93" y2="1199.24" gradientTransform="translate(-399.7554 299031.18) scale(521.8369 -248.7282)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d7ece7"/><stop offset="1" stop-color="#a0d3c6"/></linearGradient>
+    <linearGradient id="rear" x1="1.81" y1="1200.22" x2="2.82" y2="1199.21" gradientTransform="translate(-397.9185 207317.9263) scale(520.9185 -172.3641)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c9e5e0"/><stop offset="1" stop-color="#a0d3c6"/></linearGradient>
+    <linearGradient id="front" x1="1.72" y1="1200.06" x2="2.73" y2="1199.05" gradientTransform="translate(-398.8369 207394.2537) scale(520.9185 -172.3641)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8acbbb"/><stop offset="1" stop-color="#66b4a0"/></linearGradient>
+  </defs>
+  <path d="M687.48,425.59l110.85-350.02" fill="none" stroke="#0b0c0c" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M443.33,518.66c15.78-82.83,182.76-122.28,370.78-88.09,188.02,34.19,328.71,131.48,312.93,214.32-15.78,82.83-182.76,122.28-370.78,88.09-188.02-34.19-328.71-131.48-312.93-214.32Z" fill="url(#fill)" opacity=".2"/>
+  <path d="M443.33,518.66c15.78-82.83,182.76-122.28,370.78-88.09,188.02,34.19,328.71,131.48,312.93,214.32" fill="none" stroke="url(#rear)" stroke-width="31" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M960.02,602.67c0,10.99-1.71,21.99-5.11,32.58l-156.58,488.23-166.98-520.67" fill="none" stroke="#0b0c0c" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M798.33,75.57l156.7,494.77" fill="none" stroke="#0b0c0c" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1127.04,644.89c-15.78,82.83-182.76,122.28-370.78,88.09-188.02-34.19-328.71-131.48-312.93-214.32" fill="none" stroke="url(#front)" stroke-width="35" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M634.64,602.81c74.94,97.3,178.82,148.57,290.58,138.06,81.52-7.89,149.89-43.39,205.11-95.98" fill="none" stroke="#0b0c0c" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M948.65,559.54c-74.94-97.3-178.82-148.57-290.58-138.06-81.52,7.89-149.89,43.39-205.11,95.98" fill="none" stroke="#0b0c0c" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1121.78,560.74c3.94,35.5,6.57,52.59,15.78,59.17,7.89,5.26,21.04,6.57,38.13,7.89-17.09,2.63-30.24,5.26-38.13,11.83-9.2,7.89-11.83,27.61-15.78,55.22-3.94-27.61-6.57-47.33-15.78-53.91-10.52-6.57-30.24-9.2-52.59-11.83,22.35-3.94,43.39-6.57,53.91-14.46,7.89-7.89,10.52-26.3,14.46-53.91Z" fill="#f0bc0f"/>
+</svg>

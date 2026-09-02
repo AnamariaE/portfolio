@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://anamariae.github.io/portfolio/'),
   title: 'Anamaría Espinoza: Learning Transformation & Experience',
   description: 'Senior Learning Transformation professional and graphic, multimedia and web designer creating accessible, scalable learning systems.',
+  icons: { icon: '/favicon.svg' },
   openGraph: {
     title: 'Anamaría Espinoza: Learning Transformation & Experience',
     description: 'Learning systems that move people forward.',
