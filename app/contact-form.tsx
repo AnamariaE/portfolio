@@ -23,7 +23,7 @@ export default function ContactForm() {
       message,
     ].join('\n');
 
-    window.location.href = `mailto:hello@anamariaespinoza.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:contact@anamariaespinoza.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 
   return <form className="contact-form" onSubmit={prepareEmail}>

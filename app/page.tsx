@@ -250,7 +250,7 @@ export default function Home() {
     <footer className="footer">
       <p className="footer-kicker">Available for senior remote opportunities and selected consulting work</p>
       <h2>Have complex knowledge that needs to become clear?</h2>
-      <div className="footer-links"><a href="#contact">Contact form <ArrowUpRight size={18}/></a><a href="mailto:hello@anamariaespinoza.com">hello@anamariaespinoza.com <ArrowUpRight size={18}/></a><a href="https://linkedin.com/in/anamariaespinoza" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={18}/></a></div>
+      <div className="footer-links"><a href="#contact">Contact form <ArrowUpRight size={18}/></a><a href="mailto:contact@anamariaespinoza.com">contact@anamariaespinoza.com <ArrowUpRight size={18}/></a><a href="https://linkedin.com/in/anamariaespinoza" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={18}/></a></div>
       <div className="footer-bottom"><span>Working globally</span><span>© 2026 Anamaría Espinoza</span></div>
     </footer>
   </main>;
