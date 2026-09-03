@@ -1,4 +1,5 @@
 import { ArrowDownRight, ArrowUpRight, Globe2, Layers3, Palette, Sparkles } from 'lucide-react';
+import GeniallyEmbed from './genially-embed';
 
 const projects = [
   { number: '01', eyebrow: 'GLOBAL LEARNING SYSTEMS', title: 'Designing learning at Wikimedia scale', copy: 'Eleven digital courses, reusable components and course-creation systems for multilingual communities worldwide.', result: '400+ participants', tone: 'coral' },
@@ -121,13 +122,7 @@ export default function Home() {
 
       <article className="case-study reverse">
         <div className="case-visual genially-visual">
-          <iframe
-            src="https://view.genially.com/648a40f9ca5674001a0b7be0"
-            title="Gaplandia: interactive GAAP learning experience"
-            loading="lazy"
-            allow="fullscreen"
-            allowFullScreen
-          />
+          <GeniallyEmbed />
         </div>
         <div className="case-content">
           <p className="eyebrow coral-text">02 / ACCESSIBLE DIGITAL LEARNING</p>

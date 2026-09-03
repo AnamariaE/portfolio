@@ -1,9 +1,5 @@
 import type { Metadata } from 'next';
-import { Montserrat, Space_Mono } from 'next/font/google';
 import './globals.css';
-
-const body = Montserrat({ variable: '--font-body', subsets: ['latin'] });
-const display = Space_Mono({ variable: '--font-annotation', subsets: ['latin'], weight: ['400', '700'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://anamariae.github.io/portfolio/'),
@@ -27,5 +23,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body className={[body.variable, display.variable].join(' ')}>{children}</body></html>;
+  return <html lang="en"><body>{children}</body></html>;
 }
