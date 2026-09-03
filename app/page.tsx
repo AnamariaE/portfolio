@@ -11,7 +11,7 @@ export default function Home() {
   return <main>
     <nav className="nav-shell" aria-label="Primary navigation">
       <a className="wordmark" href="#top" aria-label="Anamaría Espinoza, home">{/* oxlint-disable-next-line next/no-img-element */}<img src="logo-anamaria-maestro-recortado.svg" alt=""/><strong>Anamaría Espinoza</strong></a>
-      <div className="nav-links"><a href="#work">Selected work</a><a href="#method">Method</a><a href="#consulting">Consulting</a><a href="#contact" className="contact-link">Let&apos;s talk <ArrowUpRight size={15}/></a></div>
+      <div className="nav-links"><a href="#work">Selected work</a><a href="#method">Method</a><a href="#contact" className="contact-link">Let&apos;s talk <ArrowUpRight size={15}/></a></div>
     </nav>
     <section className="hero" id="top">
       <div className="hero-kicker"><span className="pulse"/> Working globally</div>
@@ -170,65 +170,6 @@ export default function Home() {
         <p>I have spent more than a decade across global nonprofits, international development and higher education. I can help define the learning architecture, make sense of stakeholder needs and carry the work through to a functioning experience.</p>
         <p>I am also a graphic, multimedia and web designer. That is not an adjacent service: it is part of how I think. I can shape the visual language, narrative, interface and multimedia production of a learning experience, not only its instructional structure.</p>
         <p>My toolkit includes Open edX, Moodle, Canvas, Figma, Adobe Creative Suite, HTML/CSS, facilitation and functional knowledge of data, AI, R and Python.</p>
-      </div>
-    </section>
-
-    <section className="consulting-section" id="consulting" aria-labelledby="consulting-title">
-      <div className="consulting-intro">
-        <p className="eyebrow">SELECTED CONSULTING</p>
-        <h2 id="consulting-title">Complex knowledge, turned into learning that works.</h2>
-        <div>
-          <p>I work with NGOs, international organisations and expert teams that need to structure, design and publish learning without coordinating separate instructional, visual and technical suppliers.</p>
-          <p>Every engagement begins with the learner, the context and the constraints. The result is a coherent learning product, ready to use and true to the organisation behind it.</p>
-        </div>
-      </div>
-
-      <div className="consulting-grid">
-        <article className="consulting-card">
-          <div><span>01</span><p className="eyebrow">LEARNING ARCHITECTURE</p></div>
-          <h3>Instructional structure</h3>
-          <p>For teams that have the expertise and content, but need a clear learning journey.</p>
-          <ul><li>Content and audience analysis</li><li>Instructional script</li><li>Module map and learning objectives</li><li>Format and platform recommendations</li></ul>
-          <div className="consulting-price"><strong>From €2,800</strong><span>2 to 3 weeks</span></div>
-          <small className="tax-note">Taxes not included</small>
-        </article>
-
-        <article className="consulting-card featured">
-          <div><span>02</span><p className="eyebrow">END TO END</p></div>
-          <h3>Complete digital course</h3>
-          <p>From the source document to a branded course, published and working in your LMS.</p>
-          <ul><li>Learning architecture and script</li><li>Graphic and multimedia design</li><li>Moodle or Open edX production</li><li>Interactive learning objects</li><li>One revision round</li></ul>
-          <div className="consulting-price"><a className="service-contact" href="#contact">Contact me <ArrowUpRight size={18}/></a><span>Project scoped together</span></div>
-        </article>
-
-        <article className="consulting-card">
-          <div><span>03</span><p className="eyebrow">TRANSFORMATION</p></div>
-          <h3>Complex learning programme</h3>
-          <p>For multiple courses, demanding audiences or programmes that need a reusable system.</p>
-          <ul><li>Multi-course architecture</li><li>Adaptation for low-literacy audiences</li><li>Reusable components and workflows</li><li>Team capability session</li><li>Two revision rounds</li></ul>
-          <div className="consulting-price"><a className="service-contact" href="#contact">Contact me <ArrowUpRight size={18}/></a><span>Project scoped together</span></div>
-        </article>
-
-        <article className="consulting-card compact">
-          <div><span>04</span><p className="eyebrow">ONGOING CAPACITY</p></div>
-          <h3>Fractional learning design support</h3>
-          <p>Reserved weekly capacity for organisations with an ongoing learning roadmap.</p>
-          <div className="consulting-price"><a className="service-contact" href="#contact">Contact me <ArrowUpRight size={18}/></a><span>Ongoing collaboration</span></div>
-        </article>
-
-        <article className="consulting-card compact session">
-          <div><span>05</span><p className="eyebrow">FOCUSED ADVICE</p></div>
-          <h3>Criteria session</h3>
-          <p>A 90-minute review of an existing course, with concrete priorities and written recommendations.</p>
-          <div className="consulting-price session-price"><strong>€300</strong><span>90-minute session</span></div>
-          <small className="tax-note">Taxes included. After booking, you will receive an advance payment request by bank transfer or secure card link.</small>
-          <a className="session-book-button" href="https://calendly.com/hello-anamariaespinoza/criteria-session" target="_blank" rel="noreferrer">Book the Criteria Session <ArrowUpRight size={17}/></a>
-        </article>
-      </div>
-
-      <div className="consulting-cta">
-        <div><strong>Not sure what your project needs?</strong><p>Request a free 20-minute fit call or tell me what you are planning. Complete learning projects are priced after the scope is understood.</p><small>Tax treatment is stated on each priced service. Final scope, timing and fees are agreed before work begins.</small></div>
-        <div className="consulting-actions"><a href="#contact">Tell me about your project <ArrowUpRight size={18}/></a><a className="secondary" href="https://calendly.com/hello-anamariaespinoza/30min" target="_blank" rel="noreferrer">Book a free fit call <ArrowUpRight size={18}/></a></div>
       </div>
     </section>
 
