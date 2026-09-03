@@ -1,5 +1,4 @@
 import { ArrowDownRight, ArrowUpRight, Globe2, Layers3, Palette, Sparkles } from 'lucide-react';
-import ContactForm from './contact-form';
 
 const projects = [
   { number: '01', eyebrow: 'GLOBAL LEARNING SYSTEMS', title: 'Designing learning at Wikimedia scale', copy: 'Eleven digital courses, reusable components and course-creation systems for multilingual communities worldwide.', result: '400+ participants', tone: 'coral' },
@@ -242,15 +241,28 @@ export default function Home() {
       <div className="contact-intro">
         <p className="eyebrow">START A CONVERSATION</p>
         <h2 id="contact-title">What are you trying to make possible?</h2>
-        <p>Share a little about your organisation, audience and challenge. I will reply with the most useful next step, whether that is a short fit call, a focused session or a project proposal.</p>
+        <p>Tell me about your organisation, audience and challenge by email, or book a free 20-minute fit call. I will reply with the most useful next step.</p>
       </div>
-      <ContactForm />
+      <div className="contact-options">
+        <a className="contact-option" href="mailto:contact@anamariaespinoza.com">
+          <span>Email</span>
+          <strong>contact@anamariaespinoza.com</strong>
+          <p>For senior roles, consulting projects and collaborations.</p>
+          <ArrowUpRight size={24}/>
+        </a>
+        <a className="contact-option call" href="https://calendly.com/hello-anamariaespinoza/30min" target="_blank" rel="noreferrer">
+          <span>Free fit call</span>
+          <strong>20 minutes to see if there is a fit.</strong>
+          <p>Choose a time directly in my calendar.</p>
+          <ArrowUpRight size={24}/>
+        </a>
+      </div>
     </section>
 
     <footer className="footer">
       <p className="footer-kicker">Available for senior remote opportunities and selected consulting work</p>
       <h2>Have complex knowledge that needs to become clear?</h2>
-      <div className="footer-links"><a href="#contact">Contact form <ArrowUpRight size={18}/></a><a href="mailto:contact@anamariaespinoza.com">contact@anamariaespinoza.com <ArrowUpRight size={18}/></a><a href="https://linkedin.com/in/anamariaespinoza" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={18}/></a></div>
+      <div className="footer-links"><a href="https://calendly.com/hello-anamariaespinoza/30min" target="_blank" rel="noreferrer">Free fit call <ArrowUpRight size={18}/></a><a href="mailto:contact@anamariaespinoza.com">contact@anamariaespinoza.com <ArrowUpRight size={18}/></a><a href="https://linkedin.com/in/anamariaespinoza" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={18}/></a></div>
       <div className="footer-bottom"><span>Working globally</span><span>© 2026 Anamaría Espinoza</span></div>
     </footer>
   </main>;
