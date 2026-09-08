@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Anamaria">
-  <path d="M17 128 C34 88 89 72 151 80 C204 87 235 109 239 130 C227 166 180 184 126 184 C72 184 33 164 17 128 Z" fill="#A0D3C6"/>
-  <path d="M80 117 L128 31 L177 117 M80 140 L128 225 L176 140" fill="none" stroke="#0B0C0C" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M215 97 C219 113 221 122 227 126 C232 130 240 131 249 132 C240 134 232 136 227 141 C221 146 219 156 215 170 C211 156 209 146 203 141 C198 137 190 135 180 133 C190 131 198 129 203 124 C209 119 211 108 215 97 Z" fill="#F0BC0F" stroke="#0B0C0C" stroke-width="3" stroke-linejoin="round"/>
-</svg>
