@@ -1,5 +1,4 @@
 import { ArrowDownRight, ArrowUpRight, Globe2, Layers3, Palette, Sparkles } from 'lucide-react';
-import GeniallyEmbed from './genially-embed';
 
 const projects = [
   { number: '01', eyebrow: 'GLOBAL LEARNING SYSTEMS', title: 'Designing learning at Wikimedia scale', copy: 'Eleven digital courses, reusable components and course-creation systems for multilingual communities worldwide.', result: '400+ participants', tone: 'coral' },
@@ -11,7 +10,7 @@ export default function Home() {
   return <main>
     <nav className="nav-shell" aria-label="Primary navigation">
       <a className="wordmark" href="#top" aria-label="Anamaría Espinoza, home">{/* oxlint-disable-next-line next/no-img-element */}<img src="logo-anamaria-maestro-recortado.svg" alt=""/><strong>Anamaría Espinoza</strong></a>
-      <div className="nav-links"><a href="#work">Selected work</a><a href="#method">Method</a><a href="#contact" className="contact-link">Let&apos;s talk <ArrowUpRight size={15}/></a></div>
+      <div className="nav-links"><a href="#work">Selected work</a><a href="#method">Method</a><a href="#contact" className="contact-link">Contact <ArrowUpRight size={15}/></a></div>
     </nav>
     <section className="hero" id="top">
       <div className="hero-kicker"><span className="pulse"/> Working globally</div>
@@ -121,8 +120,10 @@ export default function Home() {
       </article>
 
       <article className="case-study reverse">
-        <div className="case-visual genially-visual">
-          <GeniallyEmbed />
+        <div className="case-visual gaplandia-visual">
+          <span>02 / INTERACTIVE LEARNING WORLD</span>
+          <strong>GAP<br/>LANDIA</strong>
+          <p>Gamification, storytelling and accessible multimedia design.</p>
         </div>
         <div className="case-content">
           <p className="eyebrow coral-text">02 / ACCESSIBLE DIGITAL LEARNING</p>
@@ -159,7 +160,7 @@ export default function Home() {
         <article><span>200 certified participants</span><h3>Organizer Lab</h3><p>Instructional development, templates, visual system and Open edX delivery for two global editions.</p></article>
         <article><span>Designed in 2021 · Continued in 2024</span><h3>Digital Humanities</h3><p>A complete university curriculum and gamified Moodle experience used by 120 students across two editions in 2021. After I left UCA, the gamification system continued to be used in 2024.</p></article>
         <article><span>Two simultaneous audiences</span><h3>Board Pre-Onboarding</h3><p>Structured, accessible learning for candidates and voters in Wikimedia&apos;s 2024 Board election cycle.</p></article>
-        <article><span>Recent learning strategy consultancy</span><h3>Ruralia Learning Pathway</h3><p>Co-designed with a senior learning-design colleague for Ruralia, Peru&apos;s first rural education accelerator. My contribution focused on instructional strategy and content curation.</p><p>The architecture works backwards from competence and observable evidence. A self-assessment positions each organisation by topic, rather than assigning a single maturity label, and builds a flexible pathway that complements mentoring, workshops and community.</p><div className="mini-tag-row"><span>Backward design</span><span>Evidence mapping</span><span>Self-assessment</span><span>Rural learning</span></div><a className="mini-link" href="https://eshoy.pe/ruralia/" target="_blank" rel="noreferrer">About Ruralia <ArrowUpRight size={14}/></a></article>
+        <article><span>Collaborative learning strategy project</span><h3>Ruralia Learning Pathway</h3><p>Co-designed with a senior learning-design colleague for Ruralia, Peru&apos;s first rural education accelerator. My contribution focused on instructional strategy and content curation.</p><p>The architecture works backwards from competence and observable evidence. A self-assessment positions each organisation by topic, rather than assigning a single maturity label, and builds a flexible pathway that complements mentoring, workshops and community.</p><div className="mini-tag-row"><span>Backward design</span><span>Evidence mapping</span><span>Self-assessment</span><span>Rural learning</span></div><a className="mini-link" href="https://eshoy.pe/ruralia/" target="_blank" rel="noreferrer">About Ruralia <ArrowUpRight size={14}/></a></article>
       </div>
     </section>
 
@@ -167,7 +168,7 @@ export default function Home() {
       <div className="about-kicker">About Anamaría</div>
       <div>
         <h2>I work where learning strategy meets hands-on delivery.</h2>
-        <p>I have spent more than a decade across global nonprofits, international development and higher education. I can help define the learning architecture, make sense of stakeholder needs and carry the work through to a functioning experience.</p>
+        <p>I have spent more than a decade across global nonprofits, international development and higher education. My work spans learning architecture, stakeholder needs and the delivery of functioning learning experiences.</p>
         <p>I am also a graphic, multimedia and web designer. That is not an adjacent service: it is part of how I think. I can shape the visual language, narrative, interface and multimedia production of a learning experience, not only its instructional structure.</p>
         <p>My toolkit includes Open edX, Moodle, Canvas, Figma, Adobe Creative Suite, HTML/CSS, facilitation and functional knowledge of data, AI, R and Python.</p>
       </div>
@@ -175,30 +176,31 @@ export default function Home() {
 
     <section className="contact-section" id="contact" aria-labelledby="contact-title">
       <div className="contact-intro">
-        <p className="eyebrow">START A CONVERSATION</p>
-        <h2 id="contact-title">What are you trying to make possible?</h2>
-        <p>Tell me about your organisation, audience and challenge by email, or book a free 20-minute fit call. I will reply with the most useful next step.</p>
+        <p className="eyebrow">PROFESSIONAL CONTACT</p>
+        <h2 id="contact-title">Let&apos;s connect.</h2>
+        <p>For senior roles, international teams and professional collaborations, contact me directly by email or connect with me on LinkedIn.</p>
       </div>
       <div className="contact-options">
         <a className="contact-option" href="mailto:contact@anamariaespinoza.com">
           <span>Email</span>
           <strong>contact@anamariaespinoza.com</strong>
-          <p>For senior roles, consulting projects and collaborations.</p>
+          <p>For senior roles and professional collaborations.</p>
           <ArrowUpRight size={24}/>
         </a>
-        <a className="contact-option call" href="https://calendly.com/hello-anamariaespinoza/30min" target="_blank" rel="noreferrer">
-          <span>Free fit call</span>
-          <strong>20 minutes to see if there is a fit.</strong>
-          <p>Choose a time directly in my calendar.</p>
+        <a className="contact-option network" href="https://linkedin.com/in/anamariaespinoza" target="_blank" rel="noreferrer">
+          <span>LinkedIn</span>
+          <strong>View my professional profile.</strong>
+          <p>Experience, connections and professional updates.</p>
           <ArrowUpRight size={24}/>
         </a>
       </div>
     </section>
 
     <footer className="footer">
-      <p className="footer-kicker">Available for senior remote opportunities and selected consulting work</p>
-      <h2>Have complex knowledge that needs to become clear?</h2>
-      <div className="footer-links"><a href="https://calendly.com/hello-anamariaespinoza/30min" target="_blank" rel="noreferrer">Free fit call <ArrowUpRight size={18}/></a><a href="mailto:contact@anamariaespinoza.com">contact@anamariaespinoza.com <ArrowUpRight size={18}/></a><a href="https://linkedin.com/in/anamariaespinoza" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={18}/></a></div>
+      <p className="footer-kicker">Open to senior remote opportunities</p>
+      <h2>Let&apos;s connect around learning, design and technology.</h2>
+      <div className="footer-links"><a href="mailto:contact@anamariaespinoza.com">contact@anamariaespinoza.com <ArrowUpRight size={18}/></a><a href="https://linkedin.com/in/anamariaespinoza" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={18}/></a></div>
+      <p className="footer-privacy-note">This portfolio does not use analytics or contact forms.</p>
       <div className="footer-bottom"><span>Working globally</span><span>© 2026 Anamaría Espinoza</span></div>
     </footer>
   </main>;

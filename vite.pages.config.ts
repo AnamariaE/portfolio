@@ -5,7 +5,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   root: 'github-pages-src',
   base: '/portfolio/',
-  publicDir: '../github-pages-hold-public',
+  publicDir: '../public',
   css: { postcss: { plugins: [tailwindcss()] } },
   plugins: [react()],
   build: {

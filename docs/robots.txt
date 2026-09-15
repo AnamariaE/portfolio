@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://anamariae.github.io/portfolio/sitemap.xml
