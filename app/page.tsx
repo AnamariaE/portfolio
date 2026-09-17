@@ -1,207 +1,99 @@
-import { ArrowDownRight, ArrowUpRight, Globe2, Layers3, Palette, Sparkles } from 'lucide-react';
+'use client';
 
-const projects = [
-  { number: '01', eyebrow: 'GLOBAL LEARNING SYSTEMS', title: 'Designing learning at Wikimedia scale', copy: 'Eleven digital courses, reusable components and course-creation systems for multilingual communities worldwide.', result: '400+ participants', tone: 'coral' },
-  { number: '02', eyebrow: 'ACCESSIBLE DIGITAL LEARNING', title: 'GAAP: learning built for real constraints', copy: 'A nine-module gamified programme designed around low connectivity, varied literacy and rural community contexts.', result: '51 learning objects', tone: 'ink' },
-  { number: '03', eyebrow: 'COMMUNITY-CENTRED DESIGN', title: 'Co-creating with Wayuu communities', copy: 'Culturally relevant learning that adapts digital formats to the community, not the other way around.', result: '2022 to 2024', tone: 'sun' },
-];
+import { useEffect, useState } from 'react';
+import { ArrowDownRight, ArrowUpRight, Globe2, Layers3, Palette, Sparkles } from 'lucide-react';
+import { copy, type Language } from './translations';
+
+function initialLanguage(): Language {
+  if (typeof window === 'undefined') return 'en';
+  const queryLanguage = new URLSearchParams(window.location.search).get('lang');
+  if (queryLanguage === 'en' || queryLanguage === 'es') return queryLanguage;
+  const savedLanguage = window.localStorage.getItem('anamaria-portfolio-language');
+  if (savedLanguage === 'en' || savedLanguage === 'es') return savedLanguage;
+  return window.navigator.language.toLowerCase().startsWith('es') ? 'es' : 'en';
+}
 
 export default function Home() {
-  return <main>
-    <nav className="nav-shell" aria-label="Primary navigation">
-      <a className="wordmark" href="#top" aria-label="Anamaría Espinoza, home">{/* oxlint-disable-next-line next/no-img-element */}<img src="logo-anamaria-maestro-recortado.svg" alt=""/><strong>Anamaría Espinoza</strong></a>
-      <div className="nav-links"><a href="#work">Selected work</a><a href="#method">Method</a><a href="#contact" className="contact-link">Contact <ArrowUpRight size={15}/></a></div>
-    </nav>
-    <section className="hero" id="top">
-      <div className="hero-kicker"><span className="pulse"/> Working globally</div>
-      <div className="hero-lead">
-        <h1>I design learning<span className="hero-accent"> systems that move</span><span> people forward.</span></h1>
-        <div className="hero-logo-stage" aria-hidden="true">{/* oxlint-disable-next-line next/no-img-element */}<img className="hero-logo" src="logo-anamaria-maestro-recortado.svg" alt=""/></div>
-      </div>
-      <div className="hero-notes" aria-hidden="true"><span>LEARNING</span><span>GRAPHIC</span><span>MULTIMEDIA</span><span>WEB</span><span>TECHNOLOGY</span><span>NARRATIVE</span></div>
-      <div className="hero-bottom"><p>Senior Learning Transformation & Experience professional. I am also a graphic, multimedia and web designer, turning complex knowledge into clear, accessible and scalable experiences.</p><a className="round-link" href="#work" aria-label="Explore selected work"><ArrowDownRight size={28}/></a></div>
-    </section>
-    <section className="proof-strip" aria-label="Selected impact">
-      <div><strong>10+</strong><span>years across learning, graphic, multimedia and web design</span></div>
-      <div><strong>11</strong><span>global digital courses designed and developed</span></div>
-      <div><strong>400+</strong><span>participants across multicultural communities</span></div>
-    </section>
-    <section className="work-section" id="work">
-      <div className="section-heading"><span>Selected work</span><h2>Strategy becomes credible when you can see what it changed.</h2></div>
-      <div className="project-grid">{projects.map((project)=><article className={`project-card ${project.tone}`} key={project.number}><div className="card-top"><span>{project.number}</span><ArrowUpRight size={22}/></div><div><p className="eyebrow">{project.eyebrow}</p><h3>{project.title}</h3><p className="card-copy">{project.copy}</p></div><strong className="result">{project.result}</strong></article>)}</div>
-    </section>
-    <section className="approach-preview" id="approach"><div className="approach-title"><Sparkles size={20}/><span>Where I work best</span></div><div className="capability-list"><div><Globe2/><span>Global and community-centred learning</span></div><div><Layers3/><span>Scalable systems, pathways and workflows</span></div><div><Palette/><span>Graphic, multimedia and web design</span></div><div><Sparkles/><span>Learning technology, data and AI</span></div></div></section>
+  const [language, setLanguage] = useState<Language>(initialLanguage);
+  const c = copy[language];
 
-    <section className="belief-section" aria-labelledby="belief-title">
-      <p className="eyebrow">A point of view</p>
-      <h2 id="belief-title">Gamification is structure, <em>not decoration.</em></h2>
-      <div className="belief-copy">
-        <p>Gamification is not a decorative layer added after the learning has been designed. It structures progression, attention, choice and feedback so learners understand where they are, why it matters and what comes next.</p>
-        <p>Storytelling works in the same way. It is not an optional multimedia resource. It is the architecture that turns information into a journey people can understand, remember and use.</p>
+  useEffect(() => {
+    document.documentElement.lang = language;
+    document.title = c.meta[0];
+    document.querySelector('meta[name="description"]')?.setAttribute('content', c.meta[1]);
+    window.localStorage.setItem('anamaria-portfolio-language', language);
+  }, [c.meta, language]);
+
+  const changeLanguage = (nextLanguage: Language) => {
+    setLanguage(nextLanguage);
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', nextLanguage);
+    window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+  };
+
+  return <main>
+    <nav className="nav-shell" aria-label={c.nav[0]}>
+      <a className="wordmark" href="#top" aria-label={c.nav[1]}><img src="logo-anamaria-maestro-recortado.svg" alt=""/><strong>Anamaría Espinoza</strong></a>
+      <div className="nav-links">
+        <a href="#work">{c.nav[2]}</a><a href="#method">{c.nav[3]}</a>
+        <div className="language-switcher" role="group" aria-label={c.language[0]}>
+          <button type="button" className={language === 'en' ? 'active' : ''} aria-pressed={language === 'en'} aria-label={c.language[1]} onClick={() => changeLanguage('en')}>EN</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" className={language === 'es' ? 'active' : ''} aria-pressed={language === 'es'} aria-label={c.language[2]} onClick={() => changeLanguage('es')}>ES</button>
+        </div>
+        <a href="#contact" className="contact-link">{c.nav[4]} <ArrowUpRight size={15}/></a>
       </div>
+    </nav>
+
+    <section className="hero" id="top">
+      <div className="hero-kicker"><span className="pulse"/> {c.hero[0]}</div>
+      <div className="hero-lead"><h1>{c.hero[1]}<span className="hero-accent">{c.hero[2]}</span><span>{c.hero[3]}</span></h1><div className="hero-logo-stage" aria-hidden="true"><img className="hero-logo" src="logo-anamaria-maestro-recortado.svg" alt=""/></div></div>
+      <div className="hero-notes" aria-hidden="true">{c.hero[4].map((note) => <span key={note}>{note}</span>)}</div>
+      <div className="hero-bottom"><p>{c.hero[5]}</p><a className="round-link" href="#work" aria-label={c.hero[6]}><ArrowDownRight size={28}/></a></div>
     </section>
+
+    <section className="proof-strip" aria-label={c.proof[0]}>{c.proof[1].map(([number, text]) => <div key={number}><strong>{number}</strong><span>{text}</span></div>)}</section>
+
+    <section className="work-section" id="work">
+      <div className="section-heading"><span>{c.selectedWork[0]}</span><h2>{c.selectedWork[1]}</h2></div>
+      <div className="project-grid">{c.selectedWork[2].map((project) => <article className={`project-card ${project[5]}`} key={project[0]}><div className="card-top"><span>{project[0]}</span><ArrowUpRight size={22}/></div><div><p className="eyebrow">{project[1]}</p><h3>{project[2]}</h3><p className="card-copy">{project[3]}</p></div><strong className="result">{project[4]}</strong></article>)}</div>
+    </section>
+
+    <section className="approach-preview" id="approach"><div className="approach-title"><Sparkles size={20}/><span>{c.strengths[0]}</span></div><div className="capability-list"><div><Globe2/><span>{c.strengths[1][0]}</span></div><div><Layers3/><span>{c.strengths[1][1]}</span></div><div><Palette/><span>{c.strengths[1][2]}</span></div><div><Sparkles/><span>{c.strengths[1][3]}</span></div></div></section>
+
+    <section className="belief-section" aria-labelledby="belief-title"><p className="eyebrow">{c.belief[0]}</p><h2 id="belief-title">{c.belief[1]} <em>{c.belief[2]}</em></h2><div className="belief-copy">{c.belief[3].map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></section>
 
     <section className="method-section" id="method" aria-labelledby="method-title">
-      <div className="method-intro">
-        <p className="eyebrow">The NarrLab Method</p>
-        <h2 id="method-title">From scattered information to a learning experience that works.</h2>
-        <p>I developed NarrLab as a repeatable way to turn abstract or complex information into experiences people can understand, remember and use. It connects strategy with execution, from the first ambiguous brief to the finished learning system.</p>
-      </div>
-
+      <div className="method-intro"><p className="eyebrow">{c.method.intro[0]}</p><h2 id="method-title">{c.method.intro[1]}</h2><p>{c.method.intro[2]}</p></div>
       <div className="method-frameworks">
-        <article className="framework-card framework-light">
-          <div className="framework-number">01</div>
-          <p className="eyebrow">MACRO LEVEL</p>
-          <h3>Narrative Design Framework</h3>
-          <p>Defines how the complete project will communicate and how understanding will be evaluated.</p>
-          <ol className="framework-steps">
-            <li><span>01</span> Communication problem</li>
-            <li><span>02</span> Audience and context</li>
-            <li><span>03</span> Concept</li>
-            <li><span>04</span> Visual system</li>
-            <li><span>05</span> Purposeful construction</li>
-            <li><span>06</span> Evaluation through understanding</li>
-          </ol>
-        </article>
-
-        <article className="framework-card framework-dark">
-          <div className="framework-number">02</div>
-          <p className="eyebrow">NARRATIVE LEVEL</p>
-          <h3>The NARRA Method</h3>
-          <p>Shapes the story that lives inside the system: what it means, how it unfolds and what it should change.</p>
-          <ol className="narra-steps">
-            <li><strong>N</strong><span><b>Core meaning</b>The idea that cannot be lost.</span></li>
-            <li><strong>A</strong><span><b>Audience and gap</b>What people know, need or resist.</span></li>
-            <li><strong>R</strong><span><b>Narrative journey</b>From entry and tension to insight.</span></li>
-            <li><strong>R</strong><span><b>Sensory and emotional resonance</b>What guides attention and memory.</span></li>
-            <li><strong>A</strong><span><b>Action, evaluation and adjustment</b>The effect and evidence of success.</span></li>
-          </ol>
-        </article>
+        <article className="framework-card framework-light"><div className="framework-number">01</div><p className="eyebrow">{c.method.macro[0]}</p><h3>{c.method.macro[1]}</h3><p>{c.method.macro[2]}</p><ol className="framework-steps">{c.method.macro[3].map((step, index) => <li key={step}><span>{String(index + 1).padStart(2, '0')}</span> {step}</li>)}</ol></article>
+        <article className="framework-card framework-dark"><div className="framework-number">02</div><p className="eyebrow">{c.method.narra[0]}</p><h3>{c.method.narra[1]}</h3><p>{c.method.narra[2]}</p><ol className="narra-steps">{c.method.narra[3].map(([letter, title, text]) => <li key={title}><strong>{letter}</strong><span><b>{title}</b>{text}</span></li>)}</ol></article>
       </div>
-
-      <blockquote className="method-formula">A NarrLab story transforms a gap into a journey, data into meaning, experience into memory and emotion into thoughtful action.</blockquote>
+      <blockquote className="method-formula">{c.method.formula}</blockquote>
     </section>
 
     <section className="origin-section" id="origin" aria-labelledby="origin-title">
-      <div className="origin-heading">
-        <p className="eyebrow">THE ORIGIN / UCA · 2018</p>
-        <h2 id="origin-title">NarrLab had a practice before it had a name.</h2>
-      </div>
-      <div className="origin-story">
-        <p className="origin-lead">While teaching at Universidad Centroamericana José Simeón Cañas, I created ED-UCA: a multimedia library that helped university educators explore digital pedagogy, teaching tools and emerging technologies.</p>
-        <p>The project brought together tutorials, educational articles, interviews and multimedia resources. Looking back, it contains the foundations of the work I do now: listen to a real learning context, structure complex knowledge and give it a visual and technological form people can use.</p>
-        <a className="inline-link" href="https://www.uca.edu.sv/comunicaciones-cultura/educomunicacion/" target="_blank" rel="noreferrer">Explore the ED-UCA archive <ArrowUpRight size={16}/></a>
-      </div>
-      <ol className="origin-principles" aria-label="Principles carried from ED-UCA into NarrLab">
-        <li><span>01</span><div><strong>Listen first</strong><p>Understand the learner, the context and the constraints before choosing a format.</p></div></li>
-        <li><span>02</span><div><strong>Structure with judgement</strong><p>Decide what belongs, what can go and how understanding should unfold.</p></div></li>
-        <li><span>03</span><div><strong>Design and deliver as one system</strong><p>Pedagogy, narrative, visual identity and technology are shaped together.</p></div></li>
-      </ol>
-      <p className="origin-note">ED-UCA → university teaching → digital humanities → global learning systems → the NarrLab Method</p>
+      <div className="origin-heading"><p className="eyebrow">{c.origin[0]}</p><h2 id="origin-title">{c.origin[1]}</h2></div>
+      <div className="origin-story"><p className="origin-lead">{c.origin[2]}</p><p>{c.origin[3]}</p><a className="inline-link" href="https://www.uca.edu.sv/comunicaciones-cultura/educomunicacion/" target="_blank" rel="noreferrer">{c.origin[4]} <ArrowUpRight size={16}/></a></div>
+      <ol className="origin-principles" aria-label={c.origin[5]}>{c.origin[6].map(([title, text], index) => <li key={title}><span>{String(index + 1).padStart(2, '0')}</span><div><strong>{title}</strong><p>{text}</p></div></li>)}</ol>
+      <p className="origin-note">{c.origin[7]}</p>
     </section>
 
-    <section className="case-studies" aria-label="Case studies">
-      <article className="case-study">
-        <div className="case-visual wiki-visual">
-          <img src="assets/wikilearn-current.png" alt="Current WikiLearn learning platform interface" />
-          <span className="visual-label">WikiLearn · 2022 to present</span>
-        </div>
-        <div className="case-content">
-          <p className="eyebrow coral-text">01 / GLOBAL LEARNING SYSTEMS</p>
-          <h2>From individual courses to a reusable learning ecosystem.</h2>
-          <p className="case-lead">Wikimedia&apos;s global communities need learning that works across languages, cultures, time zones and different levels of digital confidence.</p>
-          <dl className="case-facts">
-            <div><dt>Challenge</dt><dd>Turn diverse community and stakeholder needs into consistent, accessible learning without removing local autonomy.</dd></div>
-            <div><dt>My role</dt><dd>Learning architecture, instructional design, graphic and multimedia design, stakeholder collaboration, facilitation and Open edX implementation.</dd></div>
-            <div><dt>What changed</dt><dd>11 courses, reusable HTML/CSS components, templates, guidance and workflows that help contributors create learning more independently.</dd></div>
-          </dl>
-          <div className="tag-row"><span>Learning strategy</span><span>Open edX</span><span>Capability building</span><span>HTML/CSS</span></div>
-        </div>
-      </article>
-
-      <article className="case-study reverse">
-        <div className="case-visual gaplandia-visual">
-          <span>02 / INTERACTIVE LEARNING WORLD</span>
-          <strong>GAP<br/>LANDIA</strong>
-          <p>Gamification, storytelling and accessible multimedia design.</p>
-        </div>
-        <div className="case-content">
-          <p className="eyebrow coral-text">02 / ACCESSIBLE DIGITAL LEARNING</p>
-          <h2>Designing for the reality outside the brief.</h2>
-          <p className="case-lead">GAAP serves rural communities where connectivity, literacy and familiarity with digital platforms cannot be assumed.</p>
-          <dl className="case-facts">
-            <div><dt>Challenge</dt><dd>Translate complex microfinance and agricultural methodologies into learning that stays clear under real-world constraints.</dd></div>
-            <div><dt>My role</dt><dd>End-to-end instructional design, narrative architecture, character system, gamification and multimedia production methodology.</dd></div>
-            <div><dt>What changed</dt><dd>A nine-module world with 51 learning objects, three original characters and image- and audio-led experiences built for low bandwidth.</dd></div>
-          </dl>
-          <div className="tag-row"><span>Inclusive design</span><span>Gamification</span><span>Storytelling</span><span>Low bandwidth</span></div>
-        </div>
-      </article>
-
-      <article className="case-study text-case">
-        <div className="case-number-panel"><span>03</span><strong>WAYUU<br/>LEARNING<br/>CIRCLES</strong></div>
-        <div className="case-content">
-          <p className="eyebrow coral-text">03 / COMMUNITY-CENTRED DESIGN</p>
-          <h2>The format adapts to the community, not the other way around.</h2>
-          <p className="case-lead">The Wayuu Learning Circles began with cultural research and direct collaboration before any learning asset was designed.</p>
-          <dl className="case-facts">
-            <div><dt>Approach</dt><dd>Understand how knowledge is created, shared and lived in the community, then use that logic to shape the digital experience.</dd></div>
-            <div><dt>Deliverables</dt><dd>Narrative video, visual guide, low-text infographics, interactive HTML components and a facilitator learning journey.</dd></div>
-            <div><dt>Principle</dt><dd>Accessibility is not a concession or a final checklist. It is the standard that makes the work clearer for everyone.</dd></div>
-          </dl>
-          <a className="inline-link" href="https://youtu.be/m5jqztzKMPU" target="_blank" rel="noreferrer">View the Wayuu narrative <ArrowUpRight size={16}/></a>
-        </div>
-      </article>
+    <section className="case-studies" aria-label={c.cases.aria}>
+      <article className="case-study"><div className="case-visual wiki-visual"><img src="assets/wikilearn-current.png" alt={c.cases.wiki[0]}/><span className="visual-label">{c.cases.wiki[1]}</span></div><div className="case-content"><p className="eyebrow coral-text">{c.cases.wiki[2]}</p><h2>{c.cases.wiki[3]}</h2><p className="case-lead">{c.cases.wiki[4]}</p><dl className="case-facts">{c.cases.wiki[5].map(([term, description]) => <div key={term}><dt>{term}</dt><dd>{description}</dd></div>)}</dl><div className="tag-row">{c.cases.wiki[6].map((tag) => <span key={tag}>{tag}</span>)}</div></div></article>
+      <article className="case-study reverse"><div className="case-visual gaplandia-visual"><span>{c.cases.gaap[0]}</span><strong>GAP<br/>LANDIA</strong><p>{c.cases.gaap[1]}</p></div><div className="case-content"><p className="eyebrow coral-text">{c.cases.gaap[2]}</p><h2>{c.cases.gaap[3]}</h2><p className="case-lead">{c.cases.gaap[4]}</p><dl className="case-facts">{c.cases.gaap[5].map(([term, description]) => <div key={term}><dt>{term}</dt><dd>{description}</dd></div>)}</dl><div className="tag-row">{c.cases.gaap[6].map((tag) => <span key={tag}>{tag}</span>)}</div></div></article>
+      <article className="case-study text-case"><div className="case-number-panel"><span>03</span><strong>{c.cases.wayuu[0].map((line) => <span className="panel-line" key={line}>{line}</span>)}</strong></div><div className="case-content"><p className="eyebrow coral-text">{c.cases.wayuu[1]}</p><h2>{c.cases.wayuu[2]}</h2><p className="case-lead">{c.cases.wayuu[3]}</p><dl className="case-facts">{c.cases.wayuu[4].map(([term, description]) => <div key={term}><dt>{term}</dt><dd>{description}</dd></div>)}</dl><a className="inline-link" href="https://youtu.be/m5jqztzKMPU" target="_blank" rel="noreferrer">{c.cases.wayuu[5]} <ArrowUpRight size={16}/></a></div></article>
     </section>
 
-    <section className="more-work">
-      <div className="section-heading"><span>More evidence</span><h2>Learning, technology and design working as one system.</h2></div>
-      <div className="more-grid">
-        <article><span>200 certified participants</span><h3>Organizer Lab</h3><p>Instructional development, templates, visual system and Open edX delivery for two global editions.</p></article>
-        <article><span>Designed in 2021 · Continued in 2024</span><h3>Digital Humanities</h3><p>A complete university curriculum and gamified Moodle experience used by 120 students across two editions in 2021. After I left UCA, the gamification system continued to be used in 2024.</p></article>
-        <article><span>Two simultaneous audiences</span><h3>Board Pre-Onboarding</h3><p>Structured, accessible learning for candidates and voters in Wikimedia&apos;s 2024 Board election cycle.</p></article>
-        <article><span>Collaborative learning strategy project</span><h3>Ruralia Learning Pathway</h3><p>Co-designed with a senior learning-design colleague for Ruralia, Peru&apos;s first rural education accelerator. My contribution focused on instructional strategy and content curation.</p><p>The architecture works backwards from competence and observable evidence. A self-assessment positions each organisation by topic, rather than assigning a single maturity label, and builds a flexible pathway that complements mentoring, workshops and community.</p><div className="mini-tag-row"><span>Backward design</span><span>Evidence mapping</span><span>Self-assessment</span><span>Rural learning</span></div><a className="mini-link" href="https://eshoy.pe/ruralia/" target="_blank" rel="noreferrer">About Ruralia <ArrowUpRight size={14}/></a></article>
-      </div>
-    </section>
+    <section className="more-work"><div className="section-heading"><span>{c.more.heading[0]}</span><h2>{c.more.heading[1]}</h2></div><div className="more-grid">
+      {[c.more.organizer, c.more.humanities, c.more.board].map((item) => <article key={item[1]}><span>{item[0]}</span><h3>{item[1]}</h3><p>{item[2]}</p></article>)}
+      <article><span>{c.more.ruralia[0]}</span><h3>{c.more.ruralia[1]}</h3>{c.more.ruralia[2].map((paragraph) => <p key={paragraph}>{paragraph}</p>)}<div className="mini-tag-row">{c.more.ruralia[3].map((tag) => <span key={tag}>{tag}</span>)}</div><a className="mini-link" href="https://eshoy.pe/ruralia/" target="_blank" rel="noreferrer">{c.more.ruralia[4]} <ArrowUpRight size={14}/></a></article>
+    </div></section>
 
-    <section className="about-section">
-      <div className="about-kicker">About Anamaría</div>
-      <div>
-        <h2>I work where learning strategy meets hands-on delivery.</h2>
-        <p>I have spent more than a decade across global nonprofits, international development and higher education. My work spans learning architecture, stakeholder needs and the delivery of functioning learning experiences.</p>
-        <p>I am also a graphic, multimedia and web designer. That is not an adjacent service: it is part of how I think. I can shape the visual language, narrative, interface and multimedia production of a learning experience, not only its instructional structure.</p>
-        <p>My toolkit includes Open edX, Moodle, Canvas, Figma, Adobe Creative Suite, HTML/CSS, facilitation and functional knowledge of data, AI, R and Python.</p>
-      </div>
-    </section>
+    <section className="about-section"><div className="about-kicker">{c.about[0]}</div><div><h2>{c.about[1]}</h2>{c.about[2].map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></section>
 
-    <section className="contact-section" id="contact" aria-labelledby="contact-title">
-      <div className="contact-intro">
-        <p className="eyebrow">PROFESSIONAL CONTACT</p>
-        <h2 id="contact-title">Let&apos;s connect.</h2>
-        <p>For senior roles, international teams and professional collaborations, contact me directly by email or connect with me on LinkedIn.</p>
-      </div>
-      <div className="contact-options">
-        <a className="contact-option" href="mailto:contact@anamariaespinoza.com">
-          <span>Email</span>
-          <strong>contact@anamariaespinoza.com</strong>
-          <p>For senior roles and professional collaborations.</p>
-          <ArrowUpRight size={24}/>
-        </a>
-        <a className="contact-option network" href="https://linkedin.com/in/anamariaespinoza" target="_blank" rel="noreferrer">
-          <span>LinkedIn</span>
-          <strong>View my professional profile.</strong>
-          <p>Experience, connections and professional updates.</p>
-          <ArrowUpRight size={24}/>
-        </a>
-      </div>
-    </section>
+    <section className="contact-section" id="contact" aria-labelledby="contact-title"><div className="contact-intro"><p className="eyebrow">{c.contact[0]}</p><h2 id="contact-title">{c.contact[1]}</h2><p>{c.contact[2]}</p></div><div className="contact-options"><a className="contact-option" href="mailto:contact@anamariaespinoza.com"><span>Email</span><strong>contact@anamariaespinoza.com</strong><p>{c.contact[3]}</p><ArrowUpRight size={24}/></a><a className="contact-option network" href="https://linkedin.com/in/anamariaespinoza" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>{c.contact[4]}</strong><p>{c.contact[5]}</p><ArrowUpRight size={24}/></a></div></section>
 
-    <footer className="footer">
-      <p className="footer-kicker">Open to senior remote opportunities</p>
-      <h2>Let&apos;s connect around learning, design and technology.</h2>
-      <div className="footer-links"><a href="mailto:contact@anamariaespinoza.com">contact@anamariaespinoza.com <ArrowUpRight size={18}/></a><a href="https://linkedin.com/in/anamariaespinoza" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={18}/></a></div>
-      <p className="footer-privacy-note">This portfolio does not use analytics or contact forms.</p>
-      <div className="footer-bottom"><span>Working globally</span><span>© 2026 Anamaría Espinoza</span></div>
-    </footer>
+    <footer className="footer"><p className="footer-kicker">{c.footer[0]}</p><h2>{c.footer[1]}</h2><div className="footer-links"><a href="mailto:contact@anamariaespinoza.com">contact@anamariaespinoza.com <ArrowUpRight size={18}/></a><a href="https://linkedin.com/in/anamariaespinoza" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={18}/></a></div><p className="footer-privacy-note">{c.footer[2]}</p><div className="footer-bottom"><span>{c.footer[3]}</span><span>© 2026 Anamaría Espinoza</span></div></footer>
   </main>;
 }

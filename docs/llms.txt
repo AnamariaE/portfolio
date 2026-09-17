@@ -1,7 +1,7 @@
 # Anamaría Espinoza: Learning Transformation Portfolio
 
 Canonical URL: https://anamariae.github.io/portfolio/
-Language: English
+Languages: English and Spanish
 
 ## Professional focus
 
@@ -40,3 +40,16 @@ Open to senior remote roles, international teams and professional collaborations
 
 - LinkedIn: https://www.linkedin.com/in/anamariaespinoza
 - Email: contact@anamariaespinoza.com
+
+## Resumen en español
+
+Anamaría Espinoza es una profesional senior en transformación y experiencias de aprendizaje, además de diseñadora gráfica, multimedia y web, con más de diez años de experiencia entre aprendizaje, diseño y tecnología.
+
+Su trabajo conecta estrategia de aprendizaje, diseño instruccional, comunicación visual, producción multimedia, diseño web, tecnologías educativas, desarrollo de capacidades, accesibilidad, datos e inteligencia artificial.
+
+Ha diseñado y desarrollado 11 cursos digitales globales y sistemas reutilizables para iniciativas de aprendizaje de Wikimedia que han llegado a más de 400 participantes de comunidades multiculturales y multilingües. También desarrolló el Método NarrLab para convertir información compleja en experiencias de aprendizaje claras, memorables y útiles.
+
+Está disponible para posiciones senior remotas, equipos internacionales y colaboraciones profesionales.
+
+Versión en español: https://anamariae.github.io/portfolio/?lang=es
+Versión en inglés: https://anamariae.github.io/portfolio/?lang=en
