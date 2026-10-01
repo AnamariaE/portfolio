@@ -1,5 +1,6 @@
 'use client';
 
+import UcaExperience from './uca-experience';
 import { useEffect, useState } from 'react';
 import { ArrowDownRight, ArrowUpRight, Globe2, Layers3, Palette, Sparkles } from 'lucide-react';
 import { copy, type Language } from './translations';
@@ -79,7 +80,7 @@ export default function Home() {
       <div className="origin-heading"><p className="eyebrow">{c.origin[0]}</p><h2 id="origin-title">{c.origin[1]}</h2></div>
       <div className="origin-story"><p className="origin-lead">{c.origin[2]}</p><p>{c.origin[3]}</p><a className="inline-link" href="https://www.uca.edu.sv/comunicaciones-cultura/educomunicacion/" target="_blank" rel="noreferrer">{c.origin[4]} <ArrowUpRight size={16}/></a></div>
       <ol className="origin-principles" aria-label={c.origin[5]}>{c.origin[6].map(([title, text], index) => <li key={title}><span>{String(index + 1).padStart(2, '0')}</span><div><strong>{title}</strong><p>{text}</p></div></li>)}</ol>
-      <p className="origin-note">{c.origin[7]}</p>
+      <p className="origin-note">{c.origin[7]}</p><UcaExperience es={language==='es'}/>
     </section>
 
     <section className="case-studies" aria-label={c.cases.aria}>
