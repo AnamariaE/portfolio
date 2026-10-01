@@ -75,3 +75,10 @@ body{font-family:var(--font-body),sans-serif;background:var(--paper);font-weight
 .hero-bottom{margin-top:44px}
 @media(max-width:1100px){.hero-lead{grid-template-columns:minmax(0,1fr) 250px;gap:24px}.hero-lead h1{font-size:clamp(52px,7.6vw,84px)}.hero-logo-stage{min-height:390px}.hero-logo{width:230px}}
 @media(max-width:760px){.nav-shell{min-height:82px}.wordmark img{width:44px;height:58px}.hero{padding-top:54px}.hero-lead{grid-template-columns:1fr;gap:0}.hero-logo-stage{order:-1;width:136px;min-height:190px;justify-self:end;margin:-36px 2vw -62px 0}.hero-logo{width:136px}.hero-lead h1{font-size:clamp(46px,14vw,68px)}.hero-bottom{margin-top:38px}}
+
+/* Keep case headings within their grid column at intermediate widths. */
+.case-study{grid-template-columns:repeat(2,minmax(0,1fr))}
+.case-content{min-width:0;container-type:inline-size;padding-inline:clamp(22px,4vw,64px)}
+.case-content h2{max-width:100%;font-size:clamp(32px,10cqi,64px);overflow-wrap:anywhere;text-wrap:balance}
+.case-study>*,.case-facts dd{min-width:0}
+@media(max-width:900px){.case-study{grid-template-columns:minmax(0,1fr)}}
