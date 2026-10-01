@@ -1,14 +1,18 @@
 export default function UcaExperience({es}:{es:boolean}){
 const roles=es?[
-['Docencia','Profesora de Diseño Gráfico y de Comunicaciones y Nueva Tecnología.'],
-['Laboratorios multimedia','Coordinadora de los Laboratorios Multimedia.'],
-['Comunicación digital','Coordinadora del Diplomado de Comunicación Digital.'],
-['Posgrado','Profesora adjunta de Comunicación Multimedia en la Maestría en Comunicación Estratégica.']
+['Diseño y Diagramación · 2016–2022','Profesora de Diseño y Diagramación.'],
+['Laboratorios Multimedia · 2016–2022','Coordinadora de los Laboratorios Multimedia.'],
+['Comunicación y Nuevas Tecnologías · 2016–2019','Profesora de Comunicación y Nuevas Tecnologías hasta la transformación del pénsum.'],
+['Nuevo pénsum · 2020','Creé la materia Introducción a las Humanidades Digitales para el nuevo pénsum, dando continuidad a la docencia en comunicación y tecnología.'],
+['Diplomado · 2016–2019','Coordinadora del Diplomado de Comunicación Digital.'],
+['Maestría · 2021–2023','Profesora adjunta de Comunicación Multimedia en la Maestría en Comunicación Estratégica.']
 ]:[
-['Teaching','Lecturer in Graphic Design and Communications and New Technology.'],
-['Multimedia labs','Coordinator of the Multimedia Laboratories.'],
-['Digital communication','Coordinator of the Digital Communication diploma programme.'],
-['Graduate teaching','Adjunct lecturer in Multimedia Communication in the Master’s programme in Strategic Communication.']
+['Design and Layout · 2016–2022','Lecturer in Design and Layout.'],
+['Multimedia Laboratories · 2016–2022','Coordinator of the Multimedia Laboratories.'],
+['Communication and New Technologies · 2016–2019','Lecturer in Communication and New Technologies until the curriculum redesign.'],
+['New curriculum · 2020','I created Introduction to Digital Humanities for the new curriculum, continuing my teaching in communication and technology.'],
+['Diploma programme · 2016–2019','Coordinator of the Digital Communication diploma programme.'],
+['Master’s programme · 2021–2023','Adjunct lecturer in Multimedia Communication in the Master’s programme in Strategic Communication.']
 ];
-return <section className="uca-experience" aria-label={es?'Trayectoria en la UCA':'Experience at UCA'}><span className="uca-kicker">UCA · {es?'DOCENCIA Y COORDINACIÓN ACADÉMICA':'TEACHING & ACADEMIC COORDINATION'}</span><h3>{es?'Enseñar, crear y coordinar.':'Teaching, creating and coordinating.'}</h3><p>{es?'Mi trayectoria en la Universidad Centroamericana José Simeón Cañas reunió docencia en diseño, comunicación y tecnología, coordinación de laboratorios multimedia y formación de grado y posgrado.':'At Universidad Centroamericana José Simeón Cañas, my work brought together teaching in design, communication and technology, multimedia laboratory coordination, and undergraduate and graduate education.'}</p><dl>{roles.map(([title,description])=><div key={title}><dt>{title}</dt><dd>{description}</dd></div>)}</dl><p className="uca-connection">{es?'ED-UCA y Aprendiz a Crononauta forman parte de esta trayectoria docente.':'ED-UCA and Aprendiz a Crononauta are part of this teaching trajectory.'}</p></section>;
+return <section className="uca-experience" aria-label={es?'Trayectoria en la UCA':'Experience at UCA'}><span className="uca-kicker">UCA · {es?'DOCENCIA Y COORDINACIÓN ACADÉMICA':'TEACHING & ACADEMIC COORDINATION'}</span><h3>{es?'Enseñar, crear y coordinar.':'Teaching, creating and coordinating.'}</h3><p>{es?'Entre 2016 y 2022 trabajé en la Universidad Centroamericana José Simeón Cañas como docente y coordinadora académica. Mi docencia adjunta en la maestría se extendió de 2021 a 2023.':'From 2016 to 2022, I worked at Universidad Centroamericana José Simeón Cañas as a lecturer and academic coordinator. My adjunct teaching in the master’s programme ran from 2021 to 2023.'}</p><dl>{roles.map(([title,description])=><div key={title}><dt>{title}</dt><dd>{description}</dd></div>)}</dl><p className="uca-connection">{es?'ED-UCA y Aprendiz a Crononauta forman parte de esta trayectoria docente.':'ED-UCA and Aprendiz a Crononauta are part of this teaching trajectory.'}</p></section>;
 }
