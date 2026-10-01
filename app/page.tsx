@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { ArrowDownRight, ArrowUpRight, Globe2, Layers3, Palette, Sparkles } from 'lucide-react';
 import { copy, type Language } from './translations';
+import Gallery from './gallery';
 
 function initialLanguage(): Language {
   if (typeof window === 'undefined') return 'en';
@@ -35,7 +36,7 @@ export default function Home() {
     <nav className="nav-shell" aria-label={c.nav[0]}>
       <a className="wordmark" href="#top" aria-label={c.nav[1]}><img src="logo-anamaria-maestro-recortado.svg" alt=""/><strong>Anamaría Espinoza</strong></a>
       <div className="nav-links">
-        <a href="#work">{c.nav[2]}</a><a href="#method">{c.nav[3]}</a>
+        <a href="#work">{c.nav[2]}</a><a href="#galeria">{language === 'es' ? 'Galería' : 'Gallery'}</a><a href="#method">{c.nav[3]}</a>
         <div className="language-switcher" role="group" aria-label={c.language[0]}>
           <button type="button" className={language === 'en' ? 'active' : ''} aria-pressed={language === 'en'} aria-label={c.language[1]} onClick={() => changeLanguage('en')}>EN</button>
           <span aria-hidden="true">/</span>
@@ -58,6 +59,8 @@ export default function Home() {
       <div className="section-heading"><span>{c.selectedWork[0]}</span><h2>{c.selectedWork[1]}</h2></div>
       <div className="project-grid">{c.selectedWork[2].map((project) => <article className={`project-card ${project[5]}`} key={project[0]}><div className="card-top"><span>{project[0]}</span><ArrowUpRight size={22}/></div><div><p className="eyebrow">{project[1]}</p><h3>{project[2]}</h3><p className="card-copy">{project[3]}</p></div><strong className="result">{project[4]}</strong></article>)}</div>
     </section>
+
+    <Gallery language={language} />
 
     <section className="approach-preview" id="approach"><div className="approach-title"><Sparkles size={20}/><span>{c.strengths[0]}</span></div><div className="capability-list"><div><Globe2/><span>{c.strengths[1][0]}</span></div><div><Layers3/><span>{c.strengths[1][1]}</span></div><div><Palette/><span>{c.strengths[1][2]}</span></div><div><Sparkles/><span>{c.strengths[1][3]}</span></div></div></section>
 
@@ -82,7 +85,7 @@ export default function Home() {
     <section className="case-studies" aria-label={c.cases.aria}>
       <article className="case-study"><div className="case-visual wiki-visual"><img src="assets/wikilearn-current.png" alt={c.cases.wiki[0]}/><span className="visual-label">{c.cases.wiki[1]}</span></div><div className="case-content"><p className="eyebrow coral-text">{c.cases.wiki[2]}</p><h2>{c.cases.wiki[3]}</h2><p className="case-lead">{c.cases.wiki[4]}</p><dl className="case-facts">{c.cases.wiki[5].map(([term, description]) => <div key={term}><dt>{term}</dt><dd>{description}</dd></div>)}</dl><div className="tag-row">{c.cases.wiki[6].map((tag) => <span key={tag}>{tag}</span>)}</div></div></article>
       <article className="case-study reverse"><div className="case-visual gaplandia-visual"><span>{c.cases.gaap[0]}</span><strong>GAP<br/>LANDIA</strong><p>{c.cases.gaap[1]}</p></div><div className="case-content"><p className="eyebrow coral-text">{c.cases.gaap[2]}</p><h2>{c.cases.gaap[3]}</h2><p className="case-lead">{c.cases.gaap[4]}</p><dl className="case-facts">{c.cases.gaap[5].map(([term, description]) => <div key={term}><dt>{term}</dt><dd>{description}</dd></div>)}</dl><div className="tag-row">{c.cases.gaap[6].map((tag) => <span key={tag}>{tag}</span>)}</div></div></article>
-      <article className="case-study text-case"><div className="case-number-panel"><span>03</span><strong>{c.cases.wayuu[0].map((line) => <span className="panel-line" key={line}>{line}</span>)}</strong></div><div className="case-content"><p className="eyebrow coral-text">{c.cases.wayuu[1]}</p><h2>{c.cases.wayuu[2]}</h2><p className="case-lead">{c.cases.wayuu[3]}</p><dl className="case-facts">{c.cases.wayuu[4].map(([term, description]) => <div key={term}><dt>{term}</dt><dd>{description}</dd></div>)}</dl><a className="inline-link" href="https://youtu.be/m5jqztzKMPU" target="_blank" rel="noreferrer">{c.cases.wayuu[5]} <ArrowUpRight size={16}/></a></div></article>
+      <article className="case-study text-case"><div className="case-number-panel"><span>03</span><strong>{c.cases.wayuu[0].map((line) => <span className="panel-line" key={line}>{line}</span>)}</strong></div><div className="case-content"><p className="eyebrow coral-text">{c.cases.wayuu[1]}</p><h2>{c.cases.wayuu[2]}</h2><p className="case-lead">{c.cases.wayuu[3]}</p><dl className="case-facts">{c.cases.wayuu[4].map(([term, description]) => <div key={term}><dt>{term}</dt><dd>{description}</dd></div>)}</dl><a className="inline-link" href="https://canva.link/5y2mzgrw02a4k3q" target="_blank" rel="noreferrer">{c.cases.wayuu[5]} <ArrowUpRight size={16}/></a></div></article>
     </section>
 
     <section className="more-work"><div className="section-heading"><span>{c.more.heading[0]}</span><h2>{c.more.heading[1]}</h2></div><div className="more-grid">
