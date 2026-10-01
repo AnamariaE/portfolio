@@ -1,5 +1,5 @@
 'use client';
-import {useMemo,useRef,useState} from 'react';
+import {useEffect,useMemo,useRef,useState} from 'react';
 import {copy,type Language} from './translations';
 import './gallery.css';
 type Case={id:string;title:string;year:number|null;date:string;headline:string;context:string;facts:readonly (readonly [string,string])[];result:string;skills:string[];link?:string;linkLabel?:string};
@@ -12,6 +12,7 @@ function getCases(language:Language):Case[]{const c=copy[language],es=language==
 {id:'organizer',title:c.more.organizer[1],year:null,date:es?'Dos ediciones globales':'Two global editions',headline:es?'Contenido, plantillas y plataforma como un sistema.':'Content, templates and platform as one system.',context:c.more.organizer[2],facts:[],result:c.more.organizer[0],skills:['learning','design','technology','systems']}];}
 const skillIds=['learning','design','technology','narrative','systems'];
 export default function Gallery({language}:{language:Language}){
+useEffect(()=>{if(window.location.hash==='#galeria'){const frame=requestAnimationFrame(()=>document.getElementById('galeria')?.scrollIntoView({behavior:'instant'}));return ()=>cancelAnimationFrame(frame)}},[]);
 const es=language==='es',cases=useMemo(()=>getCases(language),[language]);
 const [mode,setMode]=useState('cases'),[filter,setFilter]=useState('all'),[query,setQuery]=useState(''),[active,setActive]=useState<string|null>(null);
 const dialog=useRef<HTMLDialogElement>(null),closeButton=useRef<HTMLButtonElement>(null),opener=useRef<HTMLElement|null>(null);
