@@ -1,10 +1,11 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import {hydrateRoot} from 'react-dom/client';
 import Home from '../app/page';
 import '../app/globals.css';
-
-createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>,
-);
+const query=new URLSearchParams(window.location.search).get('lang');
+const language=document.documentElement.lang==='es'?'es':'en';
+if((query==='es'||query==='en')&&window.location.pathname!==`/portfolio/${query}/`){
+ window.location.replace(`/portfolio/${query}/${window.location.hash}`);
+}else{
+ hydrateRoot(document.getElementById('root')!,<React.StrictMode><Home defaultLanguage={language}/></React.StrictMode>);
+}

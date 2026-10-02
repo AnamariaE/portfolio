@@ -15,8 +15,8 @@ function initialLanguage(): Language {
   return window.navigator.language.toLowerCase().startsWith('es') ? 'es' : 'en';
 }
 
-export default function Home() {
-  const [language, setLanguage] = useState<Language>(initialLanguage);
+export default function Home({defaultLanguage}:{defaultLanguage?:Language} = {}) {
+  const [language] = useState<Language>(defaultLanguage ?? initialLanguage);
   const c = copy[language];
 
   useEffect(() => {
@@ -26,22 +26,15 @@ export default function Home() {
     window.localStorage.setItem('anamaria-portfolio-language', language);
   }, [c.meta, language]);
 
-  const changeLanguage = (nextLanguage: Language) => {
-    setLanguage(nextLanguage);
-    const url = new URL(window.location.href);
-    url.searchParams.set('lang', nextLanguage);
-    window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
-  };
-
   return <main>
     <nav className="nav-shell" aria-label={c.nav[0]}>
-      <a className="wordmark" href="#top" aria-label={c.nav[1]}><img src="logo-anamaria-maestro-recortado.svg" alt=""/><strong>Anamaría Espinoza</strong></a>
+      <a className="wordmark" href="#top" aria-label={c.nav[1]}><img src="/portfolio/logo-anamaria-maestro-recortado.svg" alt=""/><strong>Anamaría Espinoza</strong></a>
       <div className="nav-links">
         <a href="#work">{c.nav[2]}</a><a href="#galeria">{language === 'es' ? 'Galería' : 'Gallery'}</a><a href="#method">{c.nav[3]}</a>
         <div className="language-switcher" role="group" aria-label={c.language[0]}>
-          <button type="button" className={language === 'en' ? 'active' : ''} aria-pressed={language === 'en'} aria-label={c.language[1]} onClick={() => changeLanguage('en')}>EN</button>
+          <a href="/portfolio/en/" className={language === 'en' ? 'active' : ''} aria-current={language === 'en' ? 'page' : undefined} aria-label={c.language[1]}>EN</a>
           <span aria-hidden="true">/</span>
-          <button type="button" className={language === 'es' ? 'active' : ''} aria-pressed={language === 'es'} aria-label={c.language[2]} onClick={() => changeLanguage('es')}>ES</button>
+          <a href="/portfolio/es/" className={language === 'es' ? 'active' : ''} aria-current={language === 'es' ? 'page' : undefined} aria-label={c.language[2]}>ES</a>
         </div>
         <a href="#contact" className="contact-link">{c.nav[4]} <ArrowUpRight size={15}/></a>
       </div>
@@ -49,7 +42,7 @@ export default function Home() {
 
     <section className="hero" id="top">
       <div className="hero-kicker"><span className="pulse"/> {c.hero[0]}</div>
-      <div className="hero-lead"><h1>{c.hero[1]}<span className="hero-accent">{c.hero[2]}</span><span>{c.hero[3]}</span></h1><div className="hero-logo-stage" aria-hidden="true"><img className="hero-logo" src="logo-anamaria-maestro-recortado.svg" alt=""/></div></div>
+      <div className="hero-lead"><h1>{c.hero[1]}<span className="hero-accent">{c.hero[2]}</span><span>{c.hero[3]}</span></h1><div className="hero-logo-stage" aria-hidden="true"><img className="hero-logo" src="/portfolio/logo-anamaria-maestro-recortado.svg" alt=""/></div></div>
       <div className="hero-notes" aria-hidden="true">{c.hero[4].map((note) => <span key={note}>{note}</span>)}</div>
       <div className="hero-bottom"><p>{c.hero[5]}</p><a className="round-link" href="#work" aria-label={c.hero[6]}><ArrowDownRight size={28}/></a></div>
     </section>
@@ -84,7 +77,7 @@ export default function Home() {
     </section>
 
     <section className="case-studies" aria-label={c.cases.aria}>
-      <article className="case-study"><div className="case-visual wiki-visual"><img src="assets/wikilearn-current.png" alt={c.cases.wiki[0]}/><span className="visual-label">{c.cases.wiki[1]}</span></div><div className="case-content"><p className="eyebrow coral-text">{c.cases.wiki[2]}</p><h2>{c.cases.wiki[3]}</h2><p className="case-lead">{c.cases.wiki[4]}</p><dl className="case-facts">{c.cases.wiki[5].map(([term, description]) => <div key={term}><dt>{term}</dt><dd>{description}</dd></div>)}</dl><div className="tag-row">{c.cases.wiki[6].map((tag) => <span key={tag}>{tag}</span>)}</div></div></article>
+      <article className="case-study"><div className="case-visual wiki-visual"><img src="/portfolio/assets/wikilearn-current.png" alt={c.cases.wiki[0]}/><span className="visual-label">{c.cases.wiki[1]}</span></div><div className="case-content"><p className="eyebrow coral-text">{c.cases.wiki[2]}</p><h2>{c.cases.wiki[3]}</h2><p className="case-lead">{c.cases.wiki[4]}</p><dl className="case-facts">{c.cases.wiki[5].map(([term, description]) => <div key={term}><dt>{term}</dt><dd>{description}</dd></div>)}</dl><div className="tag-row">{c.cases.wiki[6].map((tag) => <span key={tag}>{tag}</span>)}</div></div></article>
       <article className="case-study reverse"><div className="case-visual gaplandia-visual"><span>{c.cases.gaap[0]}</span><strong>GAP<br/>LANDIA</strong><p>{c.cases.gaap[1]}</p></div><div className="case-content"><p className="eyebrow coral-text">{c.cases.gaap[2]}</p><h2>{c.cases.gaap[3]}</h2><p className="case-lead">{c.cases.gaap[4]}</p><dl className="case-facts">{c.cases.gaap[5].map(([term, description]) => <div key={term}><dt>{term}</dt><dd>{description}</dd></div>)}</dl><div className="tag-row">{c.cases.gaap[6].map((tag) => <span key={tag}>{tag}</span>)}</div></div></article>
       <article className="case-study text-case"><div className="case-number-panel"><span>03</span><strong>{c.cases.wayuu[0].map((line) => <span className="panel-line" key={line}>{line}</span>)}</strong></div><div className="case-content"><p className="eyebrow coral-text">{c.cases.wayuu[1]}</p><h2>{c.cases.wayuu[2]}</h2><p className="case-lead">{c.cases.wayuu[3]}</p><dl className="case-facts">{c.cases.wayuu[4].map(([term, description]) => <div key={term}><dt>{term}</dt><dd>{description}</dd></div>)}</dl><a className="inline-link" href="https://canva.link/5y2mzgrw02a4k3q" target="_blank" rel="noreferrer">{c.cases.wayuu[5]} <ArrowUpRight size={16}/></a></div></article>
     </section>
