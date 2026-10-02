@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     description: 'Learning systems that move people forward.',
     url: '/',
     siteName: 'Anamaría Espinoza Portfolio',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Anamaría Espinoza: Learning systems that move people forward.' }],
+    images: [{ url: 'https://anamariae.github.io/portfolio/og-share-v2.png', width: 1200, height: 630, alt: 'Anamaría Espinoza: Learning systems that move people forward.' }],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Anamaría Espinoza: Learning Transformation & Experience',
     description: 'Learning systems that move people forward.',
-    images: ['/og.png'],
+    images: ['https://anamariae.github.io/portfolio/og-share-v2.png'],
   },
 };
 
