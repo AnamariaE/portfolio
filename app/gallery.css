@@ -19,3 +19,7 @@
 .gallery .case-artwork img{width:100%;height:auto;max-height:36svh;object-fit:contain;background:#211831}
 .gallery .case-cover{flex-shrink:0}
 @media(max-height:500px){.gallery dialog:has(.case-artwork){padding:16px}.gallery dialog:has(.case-artwork) h2{font-size:26px;margin:10px 0}.gallery .case-artwork img{max-height:30svh}}
+
+.gallery .wiki-cover{aspect-ratio:1201/801;background:#f0bc11}
+
+.gallery .wiki-artwork img{background:#f0bc11}

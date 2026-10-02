@@ -84,3 +84,6 @@ body{font-family:var(--font-body),sans-serif;background:var(--paper);font-weight
 @media(max-width:900px){.case-study{grid-template-columns:minmax(0,1fr)}}
 
 .uca-experience{grid-column:1/-1;min-width:0;border:2px solid var(--ink);background:var(--paper);padding:clamp(20px,4vw,44px);margin:30px 0;box-shadow:6px 7px var(--mint)}.uca-kicker{font:11px/1.6 var(--font-annotation);letter-spacing:.06em}.uca-experience h3{font-size:clamp(25px,3vw,38px);font-weight:900;line-height:1.1;margin:18px 0}.uca-experience>p{line-height:1.6;max-width:75ch}.uca-experience dl{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:24px 0}.uca-experience dl>div{display:block;border-top:2px solid var(--ink);padding-top:14px}.uca-experience dt{font-weight:800;font-size:13px;text-transform:uppercase;margin-bottom:8px}.uca-experience dd{margin:0;font-size:15px;line-height:1.6}.uca-experience .uca-connection{background:var(--sun);padding:14px;font:12px/1.6 var(--font-annotation)}@media(max-width:600px){.uca-experience dl{grid-template-columns:1fr}}
+
+/* Preserve the complete WikiLearn cover and its original colours. */
+.wiki-visual{display:flex;align-items:center;background:#f0bc11}.wiki-visual img{height:auto;object-fit:contain;filter:none}
