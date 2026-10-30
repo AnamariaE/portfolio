@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { ArrowDownRight, ArrowUpRight, Globe2, Layers3, Palette, Sparkles } from 'lucide-react';
 import { copy, type Language } from './translations';
 import Gallery from './gallery';
+import QuickSummary from './quick-summary';
 
 function initialLanguage(): Language {
   if (typeof window === 'undefined') return 'en';
@@ -41,6 +42,7 @@ export default function Home({defaultLanguage}:{defaultLanguage?:Language} = {})
     </nav>
 
     <section className="hero" id="top">
+      <a className="quick-entry" href="#en-un-minuto"><strong>{language==='es'?'¿Tienes poco tiempo? Empieza aquí.':'Short on time? Start here.'}</strong><span>{language==='es'?'Mi trabajo en un minuto':'My work in one minute'} ↗</span></a>
       <div className="hero-kicker"><span className="pulse"/> {c.hero[0]}</div>
       <div className="hero-lead"><h1>{c.hero[1]}<span className="hero-accent">{c.hero[2]}</span><span>{c.hero[3]}</span></h1><div className="hero-logo-stage" aria-hidden="true"><img className="hero-logo" src="/portfolio/logo-anamaria-maestro-recortado.svg" alt=""/></div></div>
       <div className="hero-notes" aria-hidden="true">{c.hero[4].map((note) => <span key={note}>{note}</span>)}</div>
@@ -48,6 +50,8 @@ export default function Home({defaultLanguage}:{defaultLanguage?:Language} = {})
     </section>
 
     <section className="proof-strip" aria-label={c.proof[0]}>{c.proof[1].map(([number, text]) => <div key={number}><strong>{number}</strong><span>{text}</span></div>)}</section>
+
+    <QuickSummary language={language}/>
 
     <section className="work-section" id="work">
       <div className="section-heading"><span>{c.selectedWork[0]}</span><h2>{c.selectedWork[1]}</h2></div>
