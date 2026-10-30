@@ -87,3 +87,14 @@ body{font-family:var(--font-body),sans-serif;background:var(--paper);font-weight
 
 /* Preserve the complete WikiLearn cover and its original colours. */
 .wiki-visual{display:flex;align-items:center;background:#f0bc11}.wiki-visual img{height:auto;object-fit:contain;filter:none}
+
+/* Editorial readability, retaining the established paper and ink identity. */
+h1,h2,h3{text-wrap:balance}p,li,dd{text-wrap:pretty}
+.hero h1,.section-heading h2,.project-card h3,.belief-section h2,.method-intro h2,.framework-card h3,.case-content h2,.method-formula{letter-spacing:-.035em;line-height:1.08}
+.card-copy,.case-facts dd,.framework-steps li,.narra-steps b,.uca-experience dd{font-size:1rem;line-height:1.65}
+.narra-steps small{font-size:.9375rem;line-height:1.6;color:var(--paper)}
+.case-lead,.about-copy p{line-height:1.65;max-width:65ch}.case-facts dt{font-size:.8125rem;line-height:1.6}
+.uca-kicker,.uca-experience .uca-connection,.tag-row span{font-size:.8125rem;line-height:1.65}
+.uca-experience .uca-connection{font-family:var(--font-body);font-size:1rem}.uca-experience dt{font-size:.875rem;line-height:1.5}
+:focus-visible{outline:3px solid #7a5a9e;outline-offset:5px}::selection{background:#c6a9df;color:#0b0c0c}
+@media(max-width:600px){.case-facts div{grid-template-columns:1fr;gap:10px}.nav-links{gap:14px}.hero-lead h1{font-size:clamp(2.5rem,11vw,4.25rem)}}

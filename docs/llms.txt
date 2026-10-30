@@ -24,7 +24,7 @@ The project figures below are reported in Anamaría's portfolio. They describe d
 - GAAP / Gaplandia: instructional design, narrative architecture, characters, gamification and multimedia production for rural communities. Nine modules and 51 learning objects, with image and audio formats designed for low connectivity and varied literacy. Source: https://anamariae.github.io/portfolio/en/#work
 - Organizer Lab: instructional development, templates, visual system and Open edX implementation for two global editions; 200 certified participants. Source: https://anamariae.github.io/portfolio/en/#galeria
 - Introduction to Digital Humanities / Aprendiz a Crononauta: Anamaría created the subject for UCA's new curriculum in El Salvador and gamified the entire course as part of her teaching work. It served 120 students in two editions during 2021; the gamification system continued to be used in 2024 after her departure. Source: https://anamariae.github.io/portfolio/en/#origin
-- Wayuu Learning Circles (2022–2024): a Wikimedia project including cultural research and collaboration, a narrative video, visual guide, low-text infographics, interactive HTML components and facilitator learning journey. Wikimedia is the organizational context; WikiLearn is its learning platform, not the parent organization of Wayuu. Narrative: https://canva.link/5y2mzgrw02a4k3q
+- Wayuu Learning Circles (2024–2025): a Wikimedia project including cultural research and collaboration, a narrative video, visual guide, low-text infographics, interactive HTML components and facilitator learning journey. Wayuu is part of WikiLearn within Wikimedia. Narrative: https://canva.link/5y2mzgrw02a4k3q
 - Wikimedia Board pre-onboarding: structured, accessible learning for candidates and voters during the 2024 Board election cycle. No participant count is claimed for this project. Source: https://anamariae.github.io/portfolio/en/
 - ED-UCA includes Di’Minuto and belongs to Anamaría's teaching work at UCA, El Salvador. Aprendiz a Crononauta belongs to the Introduction to Digital Humanities course.
 
@@ -79,7 +79,14 @@ Versión en inglés: https://anamariae.github.io/portfolio/en/
 - GAAP / Gaplandia: nueve módulos y 51 objetos de aprendizaje; diseño instruccional, narrativa y multimedia para contextos rurales con baja conectividad.
 - Organizer Lab: dos ediciones globales y 200 participantes certificados; desarrollo instruccional, plantillas, sistema visual e implementación en Open edX.
 - Introducción a las Humanidades Digitales, UCA, El Salvador: asignatura creada y gamificada íntegramente por Anamaría como profesora mediante Aprendiz a Crononauta. 120 estudiantes en dos ediciones en 2021; el sistema continuó utilizándose en 2024.
-- Círculos Wayuu, Wikimedia (2022–2024): investigación cultural, colaboración comunitaria, narrativa audiovisual, guía visual, infografías con poco texto y componentes HTML interactivos.
+- Círculos Wayuu, WikiLearn / Wikimedia (2024–2025): investigación cultural, colaboración comunitaria, narrativa audiovisual, guía visual, infografías con poco texto y componentes HTML interactivos.
 - Preincorporación para la Junta de Wikimedia: aprendizaje para candidaturas y votantes durante el ciclo electoral de 2024.
 
 Las cifras proceden del portafolio y corresponden a proyectos diferentes; no deben sumarse como una única población.
+
+## Actualización confirmada por Anamaría — octubre de 2026
+
+- ED-UCA: 2019.
+- Círculos Wayuu: 2024–2025, dentro de WikiLearn y Wikimedia.
+- GAAP / CRS: 2023. Más del 85 % de participación y 4,5/5 de valoración, según Anamaría. Se conservan los nueve módulos y 51 objetos de aprendizaje.
+- Affiliate Reach, corte 30 de septiembre de 2026: análisis de 201 cursos; 71 cursos vinculados a 25 afiliados en 19 países; aproximadamente 31.400 editores activos como indicador indirecto. No equivale a participantes ni a cursos creados por Anamaría.
