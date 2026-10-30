@@ -90,3 +90,18 @@ Las cifras proceden del portafolio y corresponden a proyectos diferentes; no deb
 - Círculos Wayuu: 2024–2025, dentro de WikiLearn y Wikimedia.
 - GAAP / CRS: 2023. Más del 85 % de participación y 4,5/5 de valoración, según Anamaría. Se conservan los nueve módulos y 51 objetos de aprendizaje.
 - Affiliate Reach, corte 30 de septiembre de 2026: análisis de 201 cursos; 71 cursos vinculados a 25 afiliados en 19 países; aproximadamente 31.400 editores activos como indicador indirecto. No equivale a participantes ni a cursos creados por Anamaría.
+
+## Permanent case pages / Páginas de casos
+
+- wiki (es): https://anamariae.github.io/portfolio/es/cases/wiki/
+- gaap (es): https://anamariae.github.io/portfolio/es/cases/gaap/
+- wayuu (es): https://anamariae.github.io/portfolio/es/cases/wayuu/
+- educa (es): https://anamariae.github.io/portfolio/es/cases/educa/
+- humanities (es): https://anamariae.github.io/portfolio/es/cases/humanities/
+- organizer (es): https://anamariae.github.io/portfolio/es/cases/organizer/
+- wiki (en): https://anamariae.github.io/portfolio/en/cases/wiki/
+- gaap (en): https://anamariae.github.io/portfolio/en/cases/gaap/
+- wayuu (en): https://anamariae.github.io/portfolio/en/cases/wayuu/
+- educa (en): https://anamariae.github.io/portfolio/en/cases/educa/
+- humanities (en): https://anamariae.github.io/portfolio/en/cases/humanities/
+- organizer (en): https://anamariae.github.io/portfolio/en/cases/organizer/
