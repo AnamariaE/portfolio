@@ -88,7 +88,7 @@ export default function Home({defaultLanguage}:{defaultLanguage?:Language} = {})
 
     <section className="more-work"><div className="section-heading"><span>{c.more.heading[0]}</span><h2>{c.more.heading[1]}</h2></div><div className="more-grid">
       {[c.more.organizer, c.more.humanities, c.more.board].map((item) => <article key={item[1]}><span>{item[0]}</span><h3>{item[1]}</h3><p>{item[2]}</p></article>)}
-      <article><span>{c.more.ruralia[0]}</span><h3>{c.more.ruralia[1]}</h3>{c.more.ruralia[2].map((paragraph) => <p key={paragraph}>{paragraph}</p>)}<div className="mini-tag-row">{c.more.ruralia[3].map((tag) => <span key={tag}>{tag}</span>)}</div><a className="mini-link" href="https://eshoy.pe/ruralia/" target="_blank" rel="noreferrer">{c.more.ruralia[4]} <ArrowUpRight size={14}/></a></article>
+      <article id="ruralia"><span>{c.more.ruralia[0]}</span><h3>{c.more.ruralia[1]}</h3>{c.more.ruralia[2].map((paragraph) => <p key={paragraph}>{paragraph}</p>)}<div className="mini-tag-row">{c.more.ruralia[3].map((tag) => <span key={tag}>{tag}</span>)}</div><a className="mini-link" href="https://eshoy.pe/ruralia/" target="_blank" rel="noreferrer">{c.more.ruralia[4]} <ArrowUpRight size={14}/></a></article>
     </div></section>
 
     <section className="about-section"><div className="about-kicker">{c.about[0]}</div><div><h2>{c.about[1]}</h2>{c.about[2].map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></section>
